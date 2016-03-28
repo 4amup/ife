@@ -38,3 +38,5 @@
 * [Web相关名词通俗解释](https://www.zhihu.com/question/22689579)
 * [MDN HTML入门](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction)
 * [慕课HTML+CSS基础教程视频](http://www.imooc.com/learn/9)
+* [网易云课堂 翁恺 html入门 偏理解性 讲的不错](http://study.163.com/course/introduction.htm?courseId=171001#/courseDetail)
+* [w3school html基础教程 偏文档型](http://www.w3school.com.cn/html/html_intro.asp)
