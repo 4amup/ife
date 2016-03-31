@@ -5,3 +5,9 @@
 任务列表：http://ife.baidu.com/task/all
 ***
 开发工具：webstorm (pc&mac) 破解教程及链接：http://idea.qinxi1992.cn/
+***
+**tag命名规则：v1.01.1**
+* v--version
+* 1--第一阶段任务
+* 01--任务一
+* 1--任务一的第一次优化和更新。
