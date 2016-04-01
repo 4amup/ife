@@ -9,6 +9,8 @@ fieldset,input,textarea,p,blockquote,th,td
 
 body{
     background-color: lightgray;
+    font-family: "黑体";
+    line-height: 1.8em;
 }
 .article{
     background-color: ghostwhite;
@@ -22,11 +24,11 @@ body{
     width: 100%;
     height: 100px;
 }
-.nav .logo{
+.logo{
     float: left;
     width: 120px;
     height: 60px;
-    margin:20px 0px 20px 40px;
+    margin:20px 5px 20px 40px;
     background-image: url("baidu.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -35,13 +37,86 @@ body{
     float: right;
     width: 350px;
     height: 100px;
-    margin: 0;
-    font-family: "黑体";
 }
 .nav_list li{
     float: left;
     height: 40px;
     line-height: 40px;
-    margin: 30px 15px 30px 10px;
+    padding: 30px 25px 30px 1px;
     color: black;
+}
+.second{
+    font-size: 15px;
+    padding-top: 10px;
+}
+span{
+    font-size: 12px;
+}
+.article span, .second{
+    color: dimgray;
+}
+.article p{
+    text-indent: 2em;
+}
+dd{
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+dd p{
+    text-align: center;
+    font-size: 12px;
+}
+dd img{
+    display: inline-block;
+    padding: 2px;
+    width: 180px;
+    height: 120px;
+    text-align: center;
+}
+ul li{
+    display: block;
+}
+ul,ol{
+    padding: 5px 20px;
+    counter-reset: num;
+}
+ol li:after{
+    content: counter(num);
+    counter-increment: num;
+}
+table{
+    width: 100%;
+    font-size: 14px;
+}
+table thead{
+    background-color: lightblue;
+    color: white;
+}
+table tfoot{
+    background-color: grey;
+}
+form{
+    border: solid 1px red;
+    /*为了看的明显而画上的*/
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
+select,input,textarea{
+    margin: 10px auto;
+    text-align: left;
+    position: absolute;
+    left:50%;
+}
+.sidebar{
+    font-size: medium;
+}
+.footer{
+    background-color: black;
+    height: 100px;
+    text-align: center;
 }
