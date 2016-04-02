@@ -103,18 +103,36 @@ form{
     border: solid 1px red;
     /*为了看的明显而画上的*/
     font-size: 14px;
-    text-align: center;
 }
-.text_field{
-
+label{
+    text-align:right;
+    display:inline-block;
+    width:30%;
+    padding-left:10%;
 }
-select,input,textarea{
-
+.tip{
+    padding-left:40%;
 }
 .sidebar{
     font-size: medium;
     border-left: rgba(0, 0, 0, 0.47) 4px solid;
-    padding: 5px 10px;
+    margin: 5px 10px;
+}
+.text_field{
+    position:relative;
+}
+#submit{
+    text-align:center;
+    /*padding:2px 2px;*/
+}
+#submit input{
+    width:95%;
+    font-size:15px;
+    inline:1.5em;;
+    background-color:rgba(34, 34, 255, 0.88);
+    padding:5px 5px;
+    border:none;
+    margin:5px 10px;
 }
 footer{
     background-color: black;
