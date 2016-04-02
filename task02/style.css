@@ -100,8 +100,6 @@ table tfoot{
     background-color: grey;
 }
 form{
-    border: solid 1px red;
-    /*为了看的明显而画上的*/
     font-size: 14px;
 }
 label{
