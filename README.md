@@ -7,7 +7,13 @@
 开发工具：webstorm (pc&mac) 破解教程及链接：http://idea.qinxi1992.cn/
 ***
 **tag命名规则：v1.01.1**
-* v--version
-* 1--第一阶段任务
-* 01--任务一
-* 1--任务一的第一次优化和更新。
+v--version  1--第一阶段任务   01--任务一    1--任务一的第一次优化和更新。
+***
+##任务一
+[代码地址](https://github.com/wozhizui/ife/blob/master/task01/index.html)
+
+[效果预览](http://htmlpreview.github.io/?https://github.com/wozhizui/ife/blob/master/task01/index.html)
+##任务二
+[代码地址](https://github.com/wozhizui/ife/blob/master/task02/index.html)
+
+[效果预览](http://htmlpreview.github.io/?https://github.com/wozhizui/ife/blob/master/task02/index.html)
