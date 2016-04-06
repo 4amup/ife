@@ -5,7 +5,6 @@ body,div,dl,dt,dd,ul,ol,li,h3,pre,form,figure,fieldset,input,textarea,p,blockquo
     margin: 0;
     /*大部分浏览器会默认指定一个margin值，比如我的ChromePC就是指定的8，所以去掉它，让body和浏览器边缘对齐*/
 }
-
 body{
     background-color: lightgray;
     line-height: 1.8em;
@@ -60,14 +59,16 @@ form>div{
 }
 label{
     display:inline-block;
-    width:160px;
+    width:30%;
     text-align:right;
+    margin-right:5px
 }
 input{
     display:inline-block;
 }
 .tip{
-    padding-left:160px;
+    padding-left:30%;
+    color:grey;
 }
 textarea{
     width:50%;

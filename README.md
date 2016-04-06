@@ -25,3 +25,7 @@ v--version  1--第一阶段任务   01--任务一    1--任务一的第一次优
 ##任务五
 [代码地址](https://github.com/wozhizui/ife/blob/master/task05/index.html)
 [效果预览](http://htmlpreview.github.io/?https://github.com/wozhizui/ife/blob/master/task05/index.html)
+##任务六
+[代码地址](https://github.com/wozhizui/ife/blob/master/task06/index.html)
+[效果预览](http://htmlpreview.github.io/?https://github.com/wozhizui/ife/blob/master/task06/index.html)
+
