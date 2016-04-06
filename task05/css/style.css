@@ -59,14 +59,16 @@ form>div{
 }
 label{
     display:inline-block;
-    width:160px;
+    width:30%;
     text-align:right;
+    margin-right:5px;
 }
 input{
     display:inline-block;
 }
 .tip{
-    padding-left:160px;
+    padding-left:30%;
+    color:grey;
 }
 textarea{
     width:50%;
