@@ -11,35 +11,59 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	margin:100px auto;
 	box-sizing:border-box;
 }
+.hf-font{
+	font-size:12px;
+	font-family:"Arial";
+	padding:2px 0px;
+	color:#d45d5c;
+}
 .container>header{
 	width:892px;
 	height:auto;
 	border-bottom:2px solid #938e8c;
-	text-align:left;
-	font-size:12px;
-	color:white;
-	font-family:"Arial";
 	position:relative;
 }
-
 .header div{
 	height:61px;
 	width:110px;
 	background-color:#d45d5c;
 	box-sizing:border-box;
-	position:relative;
 }
-.header p{
+.header div p{
 	position:absolute;
 	left:4px;
-	bottom:2px;
+	bottom:0px;
+	color: #ffffff;
 }
-.header time{
-	color:#d45d5c;
+#time{
 	position:absolute;
 	right:0px;
-	bottom:2px;
+	bottom:0px;
 }
-nav article{
+.part{
+	position:relative;
+	margin:30px 0px;
+}
+#parttop div{
 	width:203px;
+	height:600px;
+	float:right;
+	border-top:#cc8091 2px solid;
+}
+#parttop article{
+
+}
+#sidebox2{
+	width:458px;
+	height:257px;
+	background-image:url("https://raw.githubusercontent.com/wozhizui/ife/Devoff/task06/img/img2.png");
+}
+
+#partbottom article img{
+	float:right;
+}
+footer{
+	width:892px;
+	border-top:#938e8c solid 1px;
+	text-align:right;
 }
