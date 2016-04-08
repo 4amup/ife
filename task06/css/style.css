@@ -4,7 +4,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	margin:0;
 }
 .container{
-	border:1px red solid;
+	/*border:1px red solid;*/
 	width:980px;
 	height:1386px;
 	padding:0 44px;
@@ -120,6 +120,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 #partmiddle section{
 	width:200px;
 	display:inline-table;
+	padding-right:10px;
 }
 #partmiddle section header{
 	font-family:"Microsoft YaHei";
@@ -221,8 +222,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 }
 #sidebox2 div{
 	position:absolute;
-	width:100%;
-	background-color:#72b16a;
+	width:458px;
+	height:61px;
+	background-color:rgba(1,3,4,0.3);
 	bottom:0;
 }
 #sidebox2 p{
@@ -248,6 +250,57 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 #sidebox3{
 	width:459px;
 	height:318px;
+	background-color:rgba(234, 235, 206, 0.94);
+	margin-top:256px;
+}
+#partbottom ul{
+	list-style-image:url("https://raw.githubusercontent.com/wozhizui/ife/DevMac/task06/img/triangle.png");
+}
+#boxinbox{
+	width:260px;
+	height:160px;
+	background-color:#d45d5c;
+	color:#ffffff;
+	font-family:"Arial";
+	display:inline-block;
+	position:absolute;
+	bottom:0;
+}
+#boxinbox h1{
+	float:left;
+	line-height:86px;
+	font-family:"Microsoft YaHei";
+	font-size:110px;
+	padding:0 5px;
+	border-right:2px solid;
+	margin:37px 5px;
+}
+#boxinbox h3{
+	padding-top:37px;
+	font-size:18px;
+	font-style:italic;
+	text-transform:uppercase;
+
+}
+#boxinbox p{
+	font-size:12px;
+	line-height:1.5em;
+}
+#partbottom #sidebox3>p{
+	width:180px;
+	font-size:14px;
+	font-style:italic;
+	font-family:Arial;
+	word-spacing:5px;
+	position:absolute;
+	bottom:20px;
+	right:0;
+}
+#partbottom .sidebox ul{
+	padding:30px;
+	margin:30px;
+	line-height:2em;
+
 }
 footer{
 	width:892px;
