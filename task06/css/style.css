@@ -4,7 +4,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	margin:0;
 }
 .container{
-	border:1px red solid;
+	/*border:1px red solid;*/
 	width:980px;
 	height:1386px;
 	padding:0 44px;
