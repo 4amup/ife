@@ -247,6 +247,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	word-spacing:140%;
 	margin-left:5px;
 }
+#sidebox3{
+	width:459px;
+	height:318px;
+	background-color:rgba(234, 235, 206, 0.94);
+	margin-top:256px;
+}
 #partbottom ul{
 	list-style-image:url("https://raw.githubusercontent.com/wozhizui/ife/DevMac/task06/img/triangle.png");
 }
@@ -259,7 +265,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	display:inline-block;
 	position:absolute;
 	bottom:0;
-
 }
 #boxinbox h1{
 	float:left;
@@ -281,22 +286,21 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	font-size:12px;
 	line-height:1.5em;
 }
-#partbottom .sidebox>p{
+#partbottom #sidebox3>p{
 	width:180px;
 	font-size:14px;
 	font-style:italic;
 	font-family:Arial;
 	word-spacing:5px;
 	position:absolute;
-	bottom:0;
+	bottom:20px;
 	right:0;
 }
-#partbottom .sidebox>p span{
-	font-size:72px;
-	color:#d45d5c;
-	font-family:Arial;
-	height:14px;
-	
+#partbottom .sidebox ul{
+	padding:30px;
+	margin:30px;
+	line-height:2em;
+
 }
 footer{
 	width:892px;
