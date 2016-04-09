@@ -214,7 +214,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 }
 #sidebox2{
 	width:458px;
-	height:275px;
+	height:257px;
 	background-image:url("https://raw.githubusercontent.com/wozhizui/ife/Devoff/task06/img/img2.png");
 	float:right;
 	position:relative;
@@ -251,11 +251,13 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	width:459px;
 	height:318px;
 	background-color:rgba(234, 235, 206, 0.94);
-	margin-top:256px;
+	position:absolute;
+	bottom:0;
 }
 #partbottom ul{
 	list-style-image:url("https://raw.githubusercontent.com/wozhizui/ife/DevMac/task06/img/triangle.png");
 }
+/*图标进行定义，后续再对位置进行position定位*/
 #boxinbox{
 	width:260px;
 	height:160px;
@@ -295,12 +297,32 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	position:absolute;
 	bottom:20px;
 	right:0;
+	display:inline-block;
+}
+#partbottom .quote{
+	width:10px;
+	height:10px;
+	/*display:inline-block;*/
+	font-size:72px;
+	font-family:Arial;
+	color:#d45d5c;
+	float:right;
 }
 #partbottom .sidebox ul{
-	padding:30px;
-	margin:30px;
 	line-height:2em;
-
+	padding:20px;
+	margin:20px;
+	font-size:16px;
+	color:#5a5b5b;
+	font-family:新宋体;
+	text-align:left;
+}
+#partbottom .sidebox ul span{
+	text-align:right;
+	font-size:12px;
+	font-style:italic;
+	font-family:新宋体;
+	color: #5a5b5b;
 }
 footer{
 	width:892px;
