@@ -52,13 +52,16 @@
 		</section>
 		<form>
 			<!--这个地址的表单本来应该是层级显示的,选了中国,出中国的省份,选了山西,再出山西的城市,但是我现在不会,以后在学,反正目标是全栈.-->
-			<select>
-				<option>选择国家</option>
-				<option>中国</option>
-				<option selected="selected">美国</option>
-				<option>日本</option>
-			</select>
-			<select>
+			<div class="drop-select">
+				<select>
+					<option>选择国家</option>
+					<option>中国</option>
+					<option selected="selected">美国</option>
+					<option>日本</option>
+				</select>
+			</div>
+			<div class="drop-select">
+				<select>
 				<option>省份</option>
 				<option>北京市</option>
 				<option selected="selected">上海市</option>
@@ -67,16 +70,19 @@
 				<option>陕西省</option>
 				<option>内蒙古自治区</option>
 				<option>辽宁省</option>
-			</select>
-			<select>
-				<option>城市</option>
-				<option>哈尔滨</option>
-				<option>牡丹江</option>
-				<option>佳木斯</option>
-				<option>鹤岗</option>
-				<option>齐齐哈尔</option>
-			</select>
-			<input type="submit">
+				</select>
+			</div>
+			<div class="drop-select">
+				<select>
+					<option>城市</option>
+					<option>哈尔滨</option>
+					<option>牡丹江</option>
+					<option>佳木斯</option>
+					<option>鹤岗</option>
+					<option>齐齐哈尔</option>
+				</select>
+			</div>
+			<input type="submit" value="搜索">
 		</form>
 	</div>
 </div>

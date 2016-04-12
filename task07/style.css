@@ -134,8 +134,38 @@ body .part{
 #part4 form{
 	/*margin:0 118px;*/
 }
-#part4 select,input{
+#part4 .drop-select{
+	width:235px;
+	height:35px;
+	display:inline-block;
+	margin:0 14px;
+	background-image:url("img/pic2.png");
+}
+#part4 select{
+	width:235px;
+	height:35px;
+	/*删掉边框和删掉选中时边框效果*/
+	border:none;
+	outline-style:none;
+	/*很关键：将默认的select选择框样式清除*/
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	/*以上*/
+	background-image:url("img/下拉箭头.png");
+	background-repeat:no-repeat;
+	background-position:right;
+}
+#part4 input{
 	width:235px;
 	height:35px;
 	margin:0 14px;
+	letter-spacing:1.5em;
+	text-align:center;
+	color:white;
+	background-color:#e74f4d;
+	border:none;
 }
+/*#part4 option{*/
+	/*background-color:red;*/
+/*}*/
