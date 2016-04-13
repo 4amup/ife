@@ -181,15 +181,19 @@ body .part{
 }
 #part5{
 	background-color:#eee9e6;
-	height:600px;
+	height:605px;
 	background-image:url("img/pic3.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:auto;
 }
+#img-group{
+	width:1020px;
+	margin:0 auto;
+}
 #part5 figure{
 	display:inline-table;
-	margin-top:100px;
+	margin-top:110px;
 	float:left;
 	width:25%;
 	text-align:center;
@@ -198,6 +202,18 @@ body .part{
 	width:220px;
 	height:335px;
 	box-sizing:border-box;
-	border:solid #767777 1px;
+	border:solid #a0a1a1 2px;
 	margin:0 auto;
+}
+#img-group figcaption{
+	font-size:18px;
+}
+#part5 p{
+	font-size:10px;
+	color:#a0a1a1;
+}
+.part #Shanghai{
+	font-size:24px;
+	letter-spacing:1em;
+	margin-left:10px;
 }
