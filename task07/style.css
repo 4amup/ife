@@ -99,20 +99,17 @@ body .part{
 	text-align:center;
 	padding:45px;
 }
-#part2 img{
-	width:45px;
-	height:45px;
-}
 #part2 li{
-	float:left;
+	float:right;
 	font-family:黑体;
 	font-size:14px;
 	color:#767777;
 	width:25%;
+	height:3em;
 	box-sizing:border-box;
 	text-align:center;
-	padding:0 50px;
-	border-right:solid 3px #767777;
+	padding:0 5%;
+	border-right:solid 2px #767777;
 }
 #part3{
 	height:360px;
@@ -131,8 +128,24 @@ body .part{
 	height:340px;
 	background-image:url("img/pic2.png");
 }
-#part4 form{
-	/*margin:0 118px;*/
+#part4 section{
+	vertical-align:middle;
+	height:50%;
+}
+#part4 h2{
+	font-size:21px;
+	color:white;
+	font-family:"Microsoft YaHei";
+	font-weight:normal;
+	line-height:120px;
+	/*margin:42px auto;*/
+	/*border-bottom:d white 2px;*/
+}
+#part4 p{
+	font-size:12px;
+	color:white;
+	font-family:"Microsoft YaHei";
+	font-weight:normal;
 }
 #part4 .drop-select{
 	width:235px;
@@ -166,6 +179,25 @@ body .part{
 	background-color:#e74f4d;
 	border:none;
 }
-/*#part4 option{*/
-	/*background-color:red;*/
-/*}*/
+#part5{
+	background-color:#eee9e6;
+	height:600px;
+	background-image:url("img/pic3.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:auto;
+}
+#part5 figure{
+	display:inline-table;
+	margin-top:100px;
+	float:left;
+	width:25%;
+	text-align:center;
+}
+#part5 .picture{
+	width:220px;
+	height:335px;
+	box-sizing:border-box;
+	border:solid #767777 1px;
+	margin:0 auto;
+}
