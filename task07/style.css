@@ -185,8 +185,9 @@ body .part{
 	background-image:url("img/pic3.png");
 	background-repeat:no-repeat;
 	background-position:center;
+	background-size:auto;
 }
-#part5 section{
+#part5 figure{
 	display:inline-table;
 	margin-top:100px;
 	float:left;
