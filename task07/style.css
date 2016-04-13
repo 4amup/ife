@@ -3,6 +3,13 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	padding:0px;
 	margin:0px;
 }
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
 .container{
 	min-width:1280px;
 	font-family:"Microsoft YaHei";
@@ -17,7 +24,7 @@ header{
 }
 header .banner-left{
 	float:left;
-	margin-left:60px;
+	margin-left:56px;
 	background:url("img/header-logo.png");
 	background-repeat:no-repeat;
 	background-size:30px;
@@ -36,9 +43,9 @@ header nav{
 }
 header nav li{
 	display:inline-block;
-	line-height:60px;
 	font-size:14px;
 	padding:0 20px;
+	line-height:56px;
 }
 #login{
 	background:url("img/icon1.png");
@@ -46,17 +53,22 @@ header nav li{
 	background-repeat:no-repeat;
 	color:#e74f4d;
 }
-#part1{
-	background:url("img/pic1.png");
-	height:854px;
+body .part{
+	text-align:center;
 	background-size:100%;
+	background-repeat:no-repeat;
+	width:100%;
+}
+#part1{
+	background-image:url("img/pic1.png");
+	height:691px;
 	position:relative;
 }
 #part1 section{
 	color:white;
 	position:absolute;
 	left:120px;
-	top:270px;
+	top:230px;
 }
 #part1 section h1{
 	font-size:60px;
@@ -72,16 +84,88 @@ header nav li{
 	height:60px;
 	background-color:#e74f4d;
 	font-size:30px;
-	text-decoration:none;
 	color:white;
 	line-height:60px;
 	text-align:center;
 	margin:60px 0;
 }
-#part1>div{
+#part2{
 	height:250px;
-	width:100%;
-	background-color:white;
-	position:absolute;
-	bottom:0;
 }
+#part2 .img{
+	box-sizing:border-box;
+	float:left;
+	width:25%;
+	text-align:center;
+	padding:45px;
+}
+#part2 img{
+	width:45px;
+	height:45px;
+}
+#part2 li{
+	float:left;
+	font-family:黑体;
+	font-size:14px;
+	color:#767777;
+	width:25%;
+	box-sizing:border-box;
+	text-align:center;
+	padding:0 50px;
+	border-right:solid 3px #767777;
+}
+#part3{
+	height:360px;
+	background-color:#edecec;
+}
+#part3 img{
+	margin-top:89px;
+}
+#part3 h1{
+	font-size:54px;
+	font-weight:normal;
+	color:#a0a1a1;
+	padding:40px;
+}
+#part4{
+	height:340px;
+	background-image:url("img/pic2.png");
+}
+#part4 form{
+	/*margin:0 118px;*/
+}
+#part4 .drop-select{
+	width:235px;
+	height:35px;
+	display:inline-block;
+	margin:0 14px;
+	background-image:url("img/pic2.png");
+}
+#part4 select{
+	width:235px;
+	height:35px;
+	/*删掉边框和删掉选中时边框效果*/
+	border:none;
+	outline-style:none;
+	/*很关键：将默认的select选择框样式清除*/
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	/*以上*/
+	background-image:url("img/下拉箭头.png");
+	background-repeat:no-repeat;
+	background-position:right;
+}
+#part4 input{
+	width:235px;
+	height:35px;
+	margin:0 14px;
+	letter-spacing:1.5em;
+	text-align:center;
+	color:white;
+	background-color:#e74f4d;
+	border:none;
+}
+/*#part4 option{*/
+	/*background-color:red;*/
+/*}*/
