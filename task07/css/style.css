@@ -1,5 +1,5 @@
 /* reset */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td{
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td, button{
 	padding:0px;
 	margin:0px;
 }
@@ -10,10 +10,6 @@ a{
 	text-decoration:none;
 	color:#000;
 }
-.container{
-	min-width:1280px;
-	font-family:"Microsoft YaHei";
-}
 header{
 	width:100%;
 	height:60px;
@@ -21,6 +17,8 @@ header{
 	/*background-color:antiquewhite;*/
 	/*为了做后方便才加的背景颜色，否则全部默认为白色*/
 	overflow:hidden;
+	/*position:fixed;*/
+	/*background-color:white;*/
 }
 header .banner-left{
 	float:left;
@@ -52,6 +50,10 @@ header nav li{
 	background-position:left;
 	background-repeat:no-repeat;
 	color:#e74f4d;
+}
+.container{
+	min-width:1280px;
+	font-family:"Microsoft YaHei";
 }
 body .part{
 	text-align:center;
@@ -258,7 +260,7 @@ body .part{
 	color:#e74f4d;
 }
 #part6 section p{
-	font-family:"新宋体";
+	font-family:"Songti SC";
 	line-height:3em;
 	font-size:12px;
 	padding:30px 70px;
@@ -344,18 +346,18 @@ body .part{
 	font-size:14px;
 	font-family:黑体;
 	font-weight:normal;
-	padding:1.3em 0;
+	padding:0.8em 0;
 }
 #part8 aside p{
 	font-size:12px;
-	font-family:新宋体;
+	font-family:"Songti SC";
 	line-height:1.5em;
 	letter-spacing:1px;
 	text-align:justify;
 }
 #part8 aside details{
 	font-size:12px;
-	font-family:新宋体;
+	font-family:"Songti SC";
 	text-align:right;
 }
 #part8 form{
@@ -393,8 +395,60 @@ textarea::-webkit-input-placeholder{
 	font-size:14px;
 	background-color:#edecec;
 }
+footer{
+	height:415px;
+}
 #part9{
 	height:355px;
 	background-color:#32353e;
 	color:white;
+	text-align:center;
 }
+#part9 section{
+	padding-top:100px;
+	padding-bottom:1.5em;
+}
+#part9 section h3{
+	font-family:黑体;
+	font-size:21px;
+	padding:5px;
+}
+#part9 section p{
+	font-size:12px;
+	font-family:"Songti SC";
+}
+#part9 div{
+	width:600px;
+	margin:0 auto;
+}
+#part9 div input{
+	width:400px;
+	height:40px;
+	border:none;
+	display:inline-table;
+}
+#part9 div button{
+	width:80px;
+	height:40px;
+	border:none;
+	color:white;
+	font-size:15px;
+	display:inline-table;
+}
+/*#part9 input::-webkit-input-placeholder{*/
+	/*padding-left:.5em;*/
+	/*font-size:14px;*/
+/*}*/
+#part9 ul li a{
+	height:25px;
+}
+#qq{
+	background-image:url("../img/qq.png");
+	height:25px;
+	width:25px;
+}
+#weibo{
+	background-image:url("../img/weibo.png");
+}
+#twitter{background-image:url("../img/twitter.png")}
+#w3c{background-image:url("../img/w3c.png")}
