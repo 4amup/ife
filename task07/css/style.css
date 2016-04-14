@@ -126,7 +126,7 @@ body .part{
 }
 #part4{
 	height:340px;
-	background-image:url("/img/pic2.png");
+	background-image:url("../img/pic2.png");
 }
 #part4 section{
 	vertical-align:middle;
@@ -152,7 +152,7 @@ body .part{
 	height:35px;
 	display:inline-block;
 	margin:0 14px;
-	background-image:url("../img/pic2.png");
+	/*background-image:url("../img/pic2.png");*/
 }
 #part4 select{
 	width:235px;
@@ -165,8 +165,8 @@ body .part{
 	-moz-appearance:none;
 	-webkit-appearance:none;
 	/*以上*/
+	background-color:#e3e3e4;
 	background-image:url("../img/下拉箭头.png");
-	background-color:#a0a1a1;
 	/*先增加一个标识颜色，最后删掉*/
 	background-repeat:no-repeat;
 	background-position:right;
@@ -317,14 +317,84 @@ body .part{
 	height:750px;
 }
 #part8 section{
-	height:300px;
-	margin-top:120px;
+	/*height:200px;*/
+	margin:120px 0 100px 0;
 }
 #part8 section h3{
 	font-size:21px;
-	padding:0.5em 0;
+	padding:0.8em 0;
 }
 #part8 section p{
 	font-size:12px;
 	color:#aaaaaa;
+}
+#part8 .content{
+	width:75%;
+	height:300px;
+	margin:0 auto;
+	/*background-color:antiquewhite;*/
+}
+#part8 aside{
+	width:30%;
+	height:300px;
+	float:left;
+	text-align:left;
+}
+#part8 aside h3{
+	font-size:14px;
+	font-family:黑体;
+	font-weight:normal;
+	padding:1.3em 0;
+}
+#part8 aside p{
+	font-size:12px;
+	font-family:新宋体;
+	line-height:1.5em;
+	letter-spacing:1px;
+	text-align:justify;
+}
+#part8 aside details{
+	font-size:12px;
+	font-family:新宋体;
+	text-align:right;
+}
+#part8 form{
+	width:65%;
+	float:right;
+	margin-bottom:170px;
+}
+#part8 form input{
+	width:46%;
+	height:2.5em;
+	margin:1%;
+	box-sizing:border-box;
+	border:none;
+background-color:#edecec;
+}
+input::-webkit-input-placeholder{
+	color:black;
+	padding-left:1.5em;
+}
+textarea::-webkit-input-placeholder{
+	color:black;
+	padding-left:1.5em;
+}
+#part8 form textarea{
+	display:block;
+	margin:10px auto;
+	width:95%;
+	height:8em;
+	border:none;
+	background-color:#edecec;
+}
+#part8 #submit{
+	width:95%;
+	font-family:黑体;
+	font-size:14px;
+	background-color:#edecec;
+}
+#part9{
+	height:355px;
+	background-color:#32353e;
+	color:white;
 }
