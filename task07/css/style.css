@@ -25,7 +25,7 @@ header{
 header .banner-left{
 	float:left;
 	margin-left:56px;
-	background:url("img/header-logo.png");
+	background:url("../img/header-logo.png");
 	background-repeat:no-repeat;
 	background-size:30px;
 	background-position:left;
@@ -48,7 +48,7 @@ header nav li{
 	line-height:56px;
 }
 #login{
-	background:url("img/icon1.png");
+	background:url("../img/icon1.png");
 	background-position:left;
 	background-repeat:no-repeat;
 	color:#e74f4d;
@@ -60,7 +60,7 @@ body .part{
 	width:100%;
 }
 #part1{
-	background-image:url("img/pic1.png");
+	background-image:url("../img/pic1.png");
 	height:691px;
 	position:relative;
 }
@@ -126,7 +126,7 @@ body .part{
 }
 #part4{
 	height:340px;
-	background-image:url("img/pic2.png");
+	background-image:url("../img/pic2.png");
 }
 #part4 section{
 	vertical-align:middle;
@@ -152,7 +152,7 @@ body .part{
 	height:35px;
 	display:inline-block;
 	margin:0 14px;
-	background-image:url("img/pic2.png");
+	/*background-image:url("../img/pic2.png");*/
 }
 #part4 select{
 	width:235px;
@@ -165,7 +165,9 @@ body .part{
 	-moz-appearance:none;
 	-webkit-appearance:none;
 	/*以上*/
-	background-image:url("img/下拉箭头.png");
+	background-color:#e3e3e4;
+	background-image:url("../img/下拉箭头.png");
+	/*先增加一个标识颜色，最后删掉*/
 	background-repeat:no-repeat;
 	background-position:right;
 }
@@ -182,7 +184,7 @@ body .part{
 #part5{
 	background-color:#eee9e6;
 	height:605px;
-	background-image:url("img/pic3.png");
+	background-image:url("../img/pic3.png");
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:auto;
@@ -216,4 +218,183 @@ body .part{
 	font-size:24px;
 	letter-spacing:1em;
 	margin-left:10px;
+}
+#part6{
+	height:562px;
+	font-weight:normal;
+}
+#part6 .img{
+	width:66%;
+	height:562px;
+	background-image:url("../img/pic4.png");
+	background-size:100%;
+	display:inline-block;
+	color:white;
+	float:left;
+}
+#part6 .img h3{
+	font-size:50px;
+	padding-top:135px;
+	font-weight:normal;
+}
+#part6 .img h2{
+	font-size:158px;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+#part6 .img p{
+	font-size:22px;
+}
+#part6 section{
+	width:34%;
+	float:right;
+}
+#part6 section h1{
+	font-family:"黑体";
+	font-size:22px;
+	padding-top:160px;
+}
+#part6 section span{
+	color:#e74f4d;
+}
+#part6 section p{
+	font-family:"新宋体";
+	line-height:3em;
+	font-size:12px;
+	padding:30px 70px;
+	text-align:left;
+	letter-spacing:1px;
+}
+#part6 section a{
+	width:5em;
+	border:solid #e74f4d 1px;
+	color:#e74f4d;
+	padding:0.5em 2em;
+	margin:20px auto;
+	display:block;
+}
+#part6 section div{
+	/*暂时没有想好怎么实现，先做个样子，后面再实现hover的功能*/
+}
+#part7{
+	height:520px;
+	font-size:22px;
+	font-family:黑体;
+}
+#part7 header{
+	margin-top:35%;
+}
+#part7>div{
+	width:33%;
+	display:inline-block;
+	float:left;
+}
+#part7 .right{
+	height:520px;
+	width:34%;
+	background-image:url("../img/pic5.png");
+	background-size:100%;
+	float:right;
+}
+#part7 .left{
+	background-color:#e74f4d;
+	color:white;
+	height:100%;
+}
+#part7 div a{
+	border:1px solid white;
+	color:white;
+	width:25%;
+	margin:30px auto;
+	padding:0.5em 2em;
+	display:block;
+}
+#part7 .middle a{
+	color:#e74f4d;
+	border:1px solid #e74f4d;
+}
+#part8{
+	height:750px;
+}
+#part8 section{
+	/*height:200px;*/
+	margin:120px 0 100px 0;
+}
+#part8 section h3{
+	font-size:21px;
+	padding:0.8em 0;
+}
+#part8 section p{
+	font-size:12px;
+	color:#aaaaaa;
+}
+#part8 .content{
+	width:75%;
+	height:300px;
+	margin:0 auto;
+	/*background-color:antiquewhite;*/
+}
+#part8 aside{
+	width:30%;
+	height:300px;
+	float:left;
+	text-align:left;
+}
+#part8 aside h3{
+	font-size:14px;
+	font-family:黑体;
+	font-weight:normal;
+	padding:1.3em 0;
+}
+#part8 aside p{
+	font-size:12px;
+	font-family:新宋体;
+	line-height:1.5em;
+	letter-spacing:1px;
+	text-align:justify;
+}
+#part8 aside details{
+	font-size:12px;
+	font-family:新宋体;
+	text-align:right;
+}
+#part8 form{
+	width:65%;
+	float:right;
+	margin-bottom:170px;
+}
+#part8 form input{
+	width:46%;
+	height:2.5em;
+	margin:1%;
+	box-sizing:border-box;
+	border:none;
+background-color:#edecec;
+}
+input::-webkit-input-placeholder{
+	color:black;
+	padding-left:1.5em;
+}
+textarea::-webkit-input-placeholder{
+	color:black;
+	padding-left:1.5em;
+}
+#part8 form textarea{
+	display:block;
+	margin:10px auto;
+	width:95%;
+	height:8em;
+	border:none;
+	background-color:#edecec;
+}
+#part8 #submit{
+	width:95%;
+	font-family:黑体;
+	font-size:14px;
+	background-color:#edecec;
+}
+#part9{
+	height:355px;
+	background-color:#32353e;
+	color:white;
 }
