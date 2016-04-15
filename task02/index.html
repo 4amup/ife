@@ -133,27 +133,28 @@
         </h2>
 
         <form>
-            <div class="text_field">
+            <div>
                 <label>请输入邮箱地址</label>
                 <input type="email" placeholder="这是一个文本输入框">
             </div>
-            <span>邮箱格式请按格式输入</span>
-            <div class="text_field">
+            <span class="tip">邮箱格式请按格式输入</span>
+            <div>
                 <label>请输入密码</label>
                 <input type="password" placeholder="这是一个文本输入框">
                 <br />
                 <label>请重复输入密码</label>
                 <input type="password" placeholder="这是一个文本输入框">
-                <span>密码为6-16位数字</span>
+
             </div>
-            <div class="text_field">
+            <span class="tip">密码为6-16位数字</span>
+            <div>
                 <label>性别：</label>
                 <input type="radio" name="sex" value="男"><span>男</span>
                 <input type="radio" name="sex" value="女" checked="checked"><span>女</span>
                 <!--上一句中的checked用来做单选的默认选项-->
             </div>
-            <div class="text_field">
-                <lable>城市：</lable>
+            <div>
+                <label>城市：</label>
                 <select>
                     <option>北京</option>
                     <option>上海</option>
@@ -164,17 +165,20 @@
                     <option>天津</option>
                 </select>
             </div>
-            <div class="text_field">
+            <div>
                 <label>爱好：</label>
-                <input type="checkbox" name="爱好" value="运动"><span>运动</span>
-                <input type="checkbox" name="爱好" value="科学"><span>科学</span>
-                <input type="checkbox" name="爱好" value="艺术"><span>艺术</span>
+                <input type="checkbox" name="sport" value="sport"><span>运动</span>
+                <input type="checkbox" name="science" value="science"><span>科学</span>
+                <input type="checkbox" name="ait" value="art"><span>艺术</span>
             </div>
             <div class="text_field">
-                <lable>个人描述：</lable>
+                <label>个人描述：</label>
                 <textarea cols="20" rows="2" >这是一个多行输入框，输入您的个人描述</textarea>
             </div>
-            <input id="submit" type="submit" value="确认提交">
+            <div id="submit">
+                <input type="submit" value="确认提交">
+            </div>
+
         </form>
     </div>
 

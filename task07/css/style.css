@@ -1,0 +1,477 @@
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td, button{
+	padding:0px;
+	margin:0px;
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+body{
+	margin-top:60px;
+}
+header{
+	width:100%;
+	height:60px;
+	display:block;
+	/*background-color:antiquewhite;*/
+	/*为了做后方便才加的背景颜色，否则全部默认为白色*/
+	overflow:hidden;
+	background-color:white;
+	position:fixed;
+	top:0;
+	left:0;
+}
+header .banner-left{
+	float:left;
+	margin-left:56px;
+	background:url("../img/header-logo.png");
+	background-repeat:no-repeat;
+	background-size:30px;
+	background-position:left;
+}
+header h1{
+	line-height:60px;
+	font-size:21px;
+	font-family:黑体;
+	padding-left:35px;
+}
+header nav{
+	height:100%;
+	float:right;
+	margin-right:60px;
+}
+header nav li{
+	display:inline-block;
+	font-size:14px;
+	padding:0 20px;
+	line-height:56px;
+}
+#login{
+	background:url("../img/icon1.png");
+	background-position:left;
+	background-repeat:no-repeat;
+	color:#e74f4d;
+}
+.container{
+	min-width:1280px;
+	font-family:"Microsoft YaHei";
+}
+body .part{
+	text-align:center;
+	background-size:100%;
+	background-repeat:no-repeat;
+	width:100%;
+}
+#part1{
+	background-image:url("../img/pic1.png");
+	height:691px;
+	position:relative;
+}
+#part1 section{
+	color:white;
+	position:absolute;
+	left:120px;
+	top:230px;
+}
+#part1 section h1{
+	font-size:60px;
+	font-weight:normal;
+}
+#part1 section p{
+	font-size:21px;
+}
+#part1 section a{
+	display:block;
+	box-sizing:border-box;
+	width:330px;
+	height:60px;
+	background-color:#e74f4d;
+	font-size:30px;
+	color:white;
+	line-height:60px;
+	text-align:center;
+	margin:60px 0;
+}
+#part2{
+	height:250px;
+}
+#part2 .img{
+	box-sizing:border-box;
+	float:left;
+	width:25%;
+	text-align:center;
+	padding:45px;
+}
+#part2 li{
+	float:right;
+	font-family:黑体;
+	font-size:14px;
+	color:#767777;
+	width:25%;
+	height:3em;
+	box-sizing:border-box;
+	text-align:center;
+	padding:0 5%;
+	border-right:solid 2px #767777;
+}
+#part3{
+	height:360px;
+	background-color:#edecec;
+}
+#part3 img{
+	margin-top:89px;
+}
+#part3 h1{
+	font-size:54px;
+	font-weight:normal;
+	color:#a0a1a1;
+	padding:40px;
+}
+#part4{
+	height:340px;
+	background-image:url("../img/pic2.png");
+}
+#part4 section{
+	vertical-align:middle;
+	height:50%;
+}
+#part4 h2{
+	font-size:21px;
+	color:white;
+	font-family:"Microsoft YaHei";
+	font-weight:normal;
+	line-height:120px;
+	/*margin:42px auto;*/
+	/*border-bottom:d white 2px;*/
+}
+#part4 p{
+	font-size:12px;
+	color:white;
+	font-family:"Microsoft YaHei";
+	font-weight:normal;
+}
+#part4 .drop-select{
+	width:235px;
+	height:35px;
+	display:inline-block;
+	margin:0 14px;
+	/*background-image:url("../img/pic2.png");*/
+}
+#part4 select{
+	width:235px;
+	height:35px;
+	/*删掉边框和删掉选中时边框效果*/
+	border:none;
+	outline-style:none;
+	/*很关键：将默认的select选择框样式清除*/
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	/*以上*/
+	background-color:#e3e3e4;
+	background-image:url("../img/下拉箭头.png");
+	/*先增加一个标识颜色，最后删掉*/
+	background-repeat:no-repeat;
+	background-position:right;
+}
+#part4 input{
+	width:235px;
+	height:35px;
+	margin:0 14px;
+	letter-spacing:1.5em;
+	text-align:center;
+	color:white;
+	background-color:#e74f4d;
+	border:none;
+}
+#part5{
+	background-color:#eee9e6;
+	height:605px;
+	background-image:url("../img/pic3.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:auto;
+}
+#img-group{
+	width:1020px;
+	margin:0 auto;
+}
+#part5 figure{
+	display:inline-table;
+	margin-top:110px;
+	float:left;
+	width:25%;
+	text-align:center;
+}
+#part5 .picture{
+	width:220px;
+	height:335px;
+	box-sizing:border-box;
+	border:solid #a0a1a1 2px;
+	margin:0 auto;
+}
+#img-group figcaption{
+	font-size:18px;
+}
+#part5 p{
+	font-size:10px;
+	color:#a0a1a1;
+}
+.part #Shanghai{
+	font-size:24px;
+	letter-spacing:1em;
+	margin-left:10px;
+}
+#part6{
+	height:562px;
+	font-weight:normal;
+}
+#part6 .img{
+	width:66%;
+	height:562px;
+	background-image:url("../img/pic4.png");
+	background-size:100%;
+	display:inline-block;
+	color:white;
+	float:left;
+}
+#part6 .img h3{
+	font-size:50px;
+	padding-top:135px;
+	font-weight:normal;
+}
+#part6 .img h2{
+	font-size:158px;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+#part6 .img p{
+	font-size:22px;
+}
+#part6 section{
+	width:34%;
+	float:right;
+}
+#part6 section h1{
+	font-family:"黑体";
+	font-size:22px;
+	padding-top:160px;
+}
+#part6 section span{
+	color:#e74f4d;
+}
+#part6 section p{
+	font-family:"Songti SC";
+	line-height:3em;
+	font-size:12px;
+	padding:30px 70px;
+	text-align:left;
+	letter-spacing:1px;
+}
+#part6 section a{
+	width:5em;
+	border:solid #e74f4d 1px;
+	color:#e74f4d;
+	padding:0.5em 2em;
+	margin:20px auto;
+	display:block;
+}
+#part6 section div{
+	/*暂时没有想好怎么实现，先做个样子，后面再实现hover的功能*/
+}
+#part7{
+	height:520px;
+	font-size:22px;
+	font-family:黑体;
+}
+#part7 header{
+	margin-top:35%;
+	position:static;
+}
+#part7>div{
+	width:33%;
+	display:inline-block;
+	float:left;
+}
+#part7 .right{
+	height:520px;
+	width:34%;
+	background-image:url("../img/pic5.png");
+	background-size:100%;
+	float:right;
+}
+#part7 .left{
+	background-color:#e74f4d;
+	color:white;
+	height:100%;
+}
+#part7 div a{
+	border:1px solid white;
+	color:white;
+	width:25%;
+	margin:30px auto;
+	padding:0.5em 2em;
+	display:block;
+}
+#part7 .middle a{
+	color:#e74f4d;
+	border:1px solid #e74f4d;
+}
+#part8{
+	height:750px;
+}
+#part8 section{
+	/*height:200px;*/
+	margin:120px 0 100px 0;
+}
+#part8 section h3{
+	font-size:21px;
+	padding:0.8em 0;
+}
+#part8 section p{
+	font-size:12px;
+	color:#aaaaaa;
+}
+#part8 .content{
+	width:75%;
+	height:300px;
+	margin:0 auto;
+	/*background-color:antiquewhite;*/
+}
+#part8 aside{
+	width:30%;
+	height:300px;
+	float:left;
+	text-align:left;
+}
+#part8 aside h3{
+	font-size:14px;
+	font-family:黑体;
+	font-weight:normal;
+	padding:0.8em 0;
+}
+#part8 aside p{
+	font-size:12px;
+	font-family:"Songti SC";
+	line-height:1.5em;
+	letter-spacing:1px;
+	text-align:justify;
+}
+#part8 aside details{
+	font-size:12px;
+	font-family:"Songti SC";
+	text-align:right;
+}
+#part8 form{
+	width:65%;
+	float:right;
+	margin-bottom:170px;
+}
+#part8 form input{
+	width:46%;
+	height:2.5em;
+	margin:1%;
+	box-sizing:border-box;
+	border:none;
+background-color:#edecec;
+}
+input::-webkit-input-placeholder{
+	color:black;
+	padding-left:1.5em;
+}
+textarea::-webkit-input-placeholder{
+	color:black;
+	padding-left:1.5em;
+}
+#part8 form textarea{
+	display:block;
+	margin:10px auto;
+	width:95%;
+	height:8em;
+	border:none;
+	background-color:#edecec;
+}
+#part8 #submit{
+	width:95%;
+	font-family:黑体;
+	font-size:14px;
+	background-color:#edecec;
+}
+footer{
+	height:415px;
+	width:100%;
+}
+#part9{
+	height:355px;
+	min-width:1280px;
+	background-color:#32353e;
+	color:white;
+	text-align:center;
+}
+#part9 section{
+	padding-top:100px;
+	padding-bottom:1.5em;
+}
+#part9 section h3{
+	font-family:黑体;
+	font-size:21px;
+	padding:5px;
+}
+#part9 section p{
+	font-size:12px;
+	font-family:"Songti SC";
+}
+#part9 div{
+	width:500px;
+	height:40px;
+	margin:0 auto;
+	border:none;
+}
+#part9 div input{
+	width:85%;
+	height:40px;
+	border:none;
+	float:left;
+}
+#part9 div button{
+	width:15%;
+	height:40px;
+	border:none;
+	color:white;
+	font-size:15px;
+	float:right;
+}
+#part9 li{
+	/*float:left;*/
+	display:inline-block;
+	width:25px;
+	height:25px;
+	margin-top:30px;
+	padding:10px;
+}
+footer .copy{
+	height:60px;
+	width:100%;
+	background-color:#2f3039;
+	color:white;
+	font-family:"Songti SC";
+	font-size:12px;
+	line-height:60px;
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+footer .copy span{
+	padding-left:50px;
+}
+footer .copy a{
+	color:white;
+	font-size:12px;
+	font-family:"Songti SC";
+	float:right;
+	padding-right:50px;
+}
