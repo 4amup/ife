@@ -10,6 +10,9 @@ a{
 	text-decoration:none;
 	color:#000;
 }
+body{
+	margin-top:60px;
+}
 header{
 	width:100%;
 	height:60px;
@@ -17,8 +20,10 @@ header{
 	/*background-color:antiquewhite;*/
 	/*为了做后方便才加的背景颜色，否则全部默认为白色*/
 	overflow:hidden;
-	/*position:fixed;*/
-	/*background-color:white;*/
+	background-color:white;
+	position:fixed;
+	top:0;
+	left:0;
 }
 header .banner-left{
 	float:left;
@@ -285,6 +290,7 @@ body .part{
 }
 #part7 header{
 	margin-top:35%;
+	position:static;
 }
 #part7>div{
 	width:33%;
@@ -397,10 +403,11 @@ textarea::-webkit-input-placeholder{
 }
 footer{
 	height:415px;
-	/*width:100%;*/
+	width:100%;
 }
 #part9{
 	height:355px;
+	min-width:1280px;
 	background-color:#32353e;
 	color:white;
 	text-align:center;
@@ -448,11 +455,15 @@ footer{
 }
 footer .copy{
 	height:60px;
+	width:100%;
 	background-color:#2f3039;
 	color:white;
 	font-family:"Songti SC";
 	font-size:12px;
 	line-height:60px;
+	position:fixed;
+	bottom:0;
+	left:0;
 }
 footer .copy span{
 	padding-left:50px;
