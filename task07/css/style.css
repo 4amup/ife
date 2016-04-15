@@ -10,6 +10,9 @@ a{
 	text-decoration:none;
 	color:#000;
 }
+body{
+	margin-top:60px;
+}
 header{
 	width:100%;
 	height:60px;
@@ -17,8 +20,10 @@ header{
 	/*background-color:antiquewhite;*/
 	/*为了做后方便才加的背景颜色，否则全部默认为白色*/
 	overflow:hidden;
-	/*position:fixed;*/
-	/*background-color:white;*/
+	background-color:white;
+	position:fixed;
+	top:0;
+	left:0;
 }
 header .banner-left{
 	float:left;
@@ -285,6 +290,7 @@ body .part{
 }
 #part7 header{
 	margin-top:35%;
+	position:static;
 }
 #part7>div{
 	width:33%;
@@ -397,9 +403,11 @@ textarea::-webkit-input-placeholder{
 }
 footer{
 	height:415px;
+	width:100%;
 }
 #part9{
 	height:355px;
+	min-width:1280px;
 	background-color:#32353e;
 	color:white;
 	text-align:center;
@@ -418,37 +426,52 @@ footer{
 	font-family:"Songti SC";
 }
 #part9 div{
-	width:600px;
+	width:500px;
+	height:40px;
 	margin:0 auto;
+	border:none;
 }
 #part9 div input{
-	width:400px;
+	width:85%;
 	height:40px;
 	border:none;
-	display:inline-table;
+	float:left;
 }
 #part9 div button{
-	width:80px;
+	width:15%;
 	height:40px;
 	border:none;
 	color:white;
 	font-size:15px;
-	display:inline-table;
+	float:right;
 }
-/*#part9 input::-webkit-input-placeholder{*/
-	/*padding-left:.5em;*/
-	/*font-size:14px;*/
-/*}*/
-#part9 ul li a{
-	height:25px;
-}
-#qq{
-	background-image:url("../img/qq.png");
-	height:25px;
+#part9 li{
+	/*float:left;*/
+	display:inline-block;
 	width:25px;
+	height:25px;
+	margin-top:30px;
+	padding:10px;
 }
-#weibo{
-	background-image:url("../img/weibo.png");
+footer .copy{
+	height:60px;
+	width:100%;
+	background-color:#2f3039;
+	color:white;
+	font-family:"Songti SC";
+	font-size:12px;
+	line-height:60px;
+	position:fixed;
+	bottom:0;
+	left:0;
 }
-#twitter{background-image:url("../img/twitter.png")}
-#w3c{background-image:url("../img/w3c.png")}
+footer .copy span{
+	padding-left:50px;
+}
+footer .copy a{
+	color:white;
+	font-size:12px;
+	font-family:"Songti SC";
+	float:right;
+	padding-right:50px;
+}
