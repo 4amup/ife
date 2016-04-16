@@ -215,7 +215,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 #sidebox2{
 	width:458px;
 	height:257px;
-	background-image:url("https://raw.githubusercontent.com/wozhizui/ife/Devoff/task06/img/img2.png");
+	background-image:url("../img/img2.png");
 	float:right;
 	position:relative;
 	background-repeat:round;
@@ -255,7 +255,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fi
 	bottom:0;
 }
 #partbottom ul{
-	list-style-image:url("https://raw.githubusercontent.com/wozhizui/ife/DevMac/task06/img/triangle.png");
+	list-style-image:url("../img/triangle.png");
 }
 /*图标进行定义，后续再对位置进行position定位*/
 #boxinbox{
