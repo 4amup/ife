@@ -1,5 +1,20 @@
 /* reset */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td{
+body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td{
 	padding:0px;
 	margin:0px;
+}
+a{
+	display:block;
+	text-decoration:none;
+}
+header{
+	height:56px;
+	background-color:#2189bf;
+	display:block;
+}
+header input{
+	float:right;
+}
+header a{
+	float:right;
 }
