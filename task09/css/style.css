@@ -3,18 +3,50 @@ body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
 	padding:0px;
 	margin:0px;
 }
+body{
+	font-size:12px;
+}
 a{
 	display:block;
 	text-decoration:none;
+	color:black;
 }
 header{
 	height:56px;
 	background-color:#2189bf;
 	display:block;
 }
+header #logo{
+	background-image:url("../img/logo.png");
+	background-position:center;
+	background-repeat:no-repeat;
+	float:left;
+	width:36px;
+	height:56px;
+	margin:0 50px
+}
 header input{
 	float:right;
+	width:230px;
+	height:22px;
+	border-radius:11px;
+	border:none;
+	background-image:url("../img/search.png");
+	background-repeat:no-repeat;
+	background-position:1em;
+	padding:0 2em;
+	margin:15px 0;
 }
-header a{
+header #login{
 	float:right;
+	line-height:56px;
+	margin:0 2em;
+	padding:0 1.5em;
+	background-image:url("../img/login.png");
+	background-position:left;
+	background-repeat:no-repeat;
+	color:white;
+}
+#login:hover, #login:focus{
+	transition:;
 }
