@@ -128,57 +128,70 @@
     </div>
 
     <div class="article">
-        <h2 class="sidebar">
-            这里以后是一个侧栏，这是侧栏的标题
-        </h2>
+        <form action="" method="">
+            <h3>
+                这里以后是一个侧栏，这是侧栏的标题
+            </h3>
+	        <ul>
+		        <li>
+			        <label for="form-email">请输入邮箱地址</label>
+			        <input type="email" name="useremail" id="form-email" class="textinput" placeholder="这是一个文本输入框">
+			        <em>邮箱格式请按格式输入</em>
+		        </li>
+		        <li>
+			        <label for="form-pw">请输入密码</label>
+			        <input type="password" name="userpassword" id="form-pw" class="textinput" placeholder="这是一个文本输入框">
+		        </li>
+		        <li>
 
-        <form>
-            <div>
-                <label>请输入邮箱地址</label>
-                <input type="email" placeholder="这是一个文本输入框">
-            </div>
-            <span class="tip">邮箱格式请按格式输入</span>
-            <div>
-                <label>请输入密码</label>
-                <input type="password" placeholder="这是一个文本输入框">
-                <br />
-                <label>请重复输入密码</label>
-                <input type="password" placeholder="这是一个文本输入框">
-
-            </div>
-            <span class="tip">密码为6-16位数字</span>
-            <div>
-                <label>性别：</label>
-                <input type="radio" name="sex" value="男"><span>男</span>
-                <input type="radio" name="sex" value="女" checked="checked"><span>女</span>
-                <!--上一句中的checked用来做单选的默认选项-->
-            </div>
-            <div>
-                <label>城市：</label>
-                <select>
-                    <option>北京</option>
-                    <option>上海</option>
-                    <option>广州</option>
-                    <option selected="selected">深圳</option>
-                    <!--selected用来做下拉表单的默认选项-->
-                    <option>重庆</option>
-                    <option>天津</option>
-                </select>
-            </div>
-            <div>
-                <label>爱好：</label>
-                <input type="checkbox" name="sport" value="sport"><span>运动</span>
-                <input type="checkbox" name="science" value="science"><span>科学</span>
-                <input type="checkbox" name="ait" value="art"><span>艺术</span>
-            </div>
-            <div class="text_field">
-                <label>个人描述：</label>
-                <textarea cols="20" rows="2" >这是一个多行输入框，输入您的个人描述</textarea>
-            </div>
-            <div id="submit">
-                <input type="submit" value="确认提交">
-            </div>
-
+			        <label for="form-2pw">请重复输入密码</label>
+			        <input type="password" name="user2password" id="form-2pw" class="textinput" placeholder="这是一个文本输入框">
+			        <em>密码为6-16位数字</em>
+		        </li>
+		        <li>
+			        <fieldset id="gender">
+				        <legend>性别</legend>
+				        <ul>
+					        <li><label><input type="radio" name="sex" value="male">男</label></li>
+					        <li><label><input type="radio" name="sex" value="female" checked>女</label></li>
+				        </ul>
+			        </fieldset>
+			        <fieldset id="city">
+				        <legend>城市</legend>
+				        <label for="form-city"></label>
+				        <select name="city" id="form-city">
+					        <option>北京</option>
+					        <option>上海</option>
+					        <option>广州</option>
+					        <option selected>深圳</option>
+					        <!--selected用来做下拉表单的默认选项-->
+					        <option>重庆</option>
+					        <option>天津</option>
+				        </select>
+			        </fieldset>
+			        <fieldset id="hobby">
+				        <legend>爱好</legend>
+				        <ul>
+					        <li>
+						        <label><input type="checkbox" name="hobby" value="sport">运动</label>
+					        </li>
+					        <li>
+						        <label><input type="checkbox" name="hobby" value="science">科学</label>
+					        </li>
+					        <li>
+						        <label><input type="checkbox" name="hobby" value="art">艺术</label>
+					        </li>
+				        </ul>
+			        </fieldset>
+		        </li>
+		         <li>
+			        <label for="form-story">个人描述</label>
+			        <textarea name="story" id="form-story" cols="20" rows="3" placeholder="这是一个多行输入框，请输入您的个人描述">这是一个多行输入框，请输入您的个人描述</textarea>
+		        </li>
+		        <li>
+			        <input type="submit" value="确认提交">
+		        </li>
+	        </ul>
         </form>
     </div>
 
