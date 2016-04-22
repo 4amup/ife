@@ -91,6 +91,7 @@ ol li:after{
 table{
     width: 100%;
     font-size: 14px;
+	border-collapse:collapse;
 }
 table thead{
     background-color: lightblue;
@@ -109,7 +110,7 @@ form h3{
 	padding:.5em;
 	font-size:16px;
 }
-ul li{
+form ul li{
 	clear:both;
 }
 form>ul>li{
