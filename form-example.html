@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<style type="text/css">
+		ul li{
+			clear: both;
+			list-style: none;
+		}
+		form>ul>li{
+			margin: 0.5em 0;
+		}
+		form{
+			width: 40em;
+			border: 1px solid #666;
+			border-radius: 10px;
+			box-shadow: .2em .2em .5em #999;
+			background-color: #d0e9f6;
+			padding: 1em;
+			overflow: hidden;
+		}
+		label{
+			display: block;
+			float: left;
+			width: 10em;
+			text-align: right;
+			margin-right: 0.5em;
+			color: #04699d;
+		}
+		input.textinput{
+			width: 30em;
+			height: 2em;
+			border: 1px solid #666;
+		}
+		textarea{
+			display: block;
+			width: 30em;
+			height: 5em;
+			border: 1px solid #666;
+			line-height: 1.25;
+			overflow: auto;
+			resize: none;
+		}
+		input.textinput, textarea{
+			font-family: Georgia, "Times New Roman", Times, serif;
+			font-size: 0.875em;
+		}
+		fieldset{
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		legend{
+			display: block;
+			width: 10em;
+			float: left;
+			text-align: right;
+			margin-right: 0.5em;
+			padding: 0;
+			color: #04699d;
+		}
+		#features label, #colors label{
+			color: #000;
+			display: inline;
+			float: none;
+			text-align: inherit;
+			width: auto;
+			font-weight: normal;
+			background-color: inherit;
+		}
+		#colors ul{
+			margin-left: 10em;
+			padding: 0;
+		}
+		#colors ul li{
+			display: inline;
+			margin-bottom: 0;
+		}
+		#features ul{
+			margin-left: 10em;
+			padding-left: 0.5em;
+		}
+		#features ul li{
+			margin-bottom: 0;
+			clear: none;
+		}
+		input[type="submit"], input[type="reset"]{
+			display: block;
+			width: 10em;
+			height: 2em;
+			float: left;
+			background-color: white;
+			font-size: inherit;
+			border: 1px solid #04699d;
+			border-radius: 4px;
+			box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+		}
+		input[type="submit"]{
+			margin-left: 20%;
+			margin-right: 1em;
+			color: #C00;
+		}
+	</style>
+</head>
+<body>
+<form action="" method="">
+	<h2>Contest Entry Information</h2>
+
+	<ul>
+		<li>
+			<label for="form-name">Name</label>
+			<input type="text" name="username" id="form-name" class="textinput">
+		</li>
+		<li>
+			<label for="form-email">Email</label>
+			<input type="email" name="emailaddress" id="form-email" class="textinput">
+		</li>
+		<li>
+			<label for="form-tel">Telephone</label>
+			<input type="tel" name="telephone" id="form-tel" class="textinput">
+		</li>
+		<li>
+			<label for="form-story">Your story</label>
+			<textarea name="story" maxlength="300" id="form-story" rows="3" cols="30" placeholder="No more than 300 characters long"></textarea>
+		</li>
+		<li>
+			<label for="sizes">Size</label>
+			<select name="size">
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				<option>13</option>
+			</select>
+			<em>Sizes reflect standard men's sizes</em>
+		</li>
+		<li>
+			<fieldset id="colors">
+				<legend>Color</legend>
+				<ul>
+					<li><label><input type="radio" name="color" value="red">Red</label></li>
+					<li><label><input type="radio" name="color" value="blue">Blue</label></li>
+					<li><label><input type="radio" name="color" value="black">Black</label></li>
+					<li><label><input type="radio" name="color" value="silver">Silver</label></li>
+				</ul>
+			</fieldset>
+		</li>
+		<li>
+			<fieldset id="features">
+				<legend>Features</legend>
+				<ul>
+					<li>
+						<label><input type="checkbox" name="feature" value="laces">Sparkley laces</label>
+					</li>
+					<li>
+						<label><input type="checkbox" name="feature" value="logo">Metallic logo</label>
+					</li>
+					<li>
+						<label><input type="checkbox" name="feature" value="heels">Light-up heels</label>
+					</li>
+					<li>
+						<label><input type="checkbox" name="feature" value="mp3">MP3-enabled</label>
+					</li>
+				</ul>
+			</fieldset>
+		</li>
+		<li class="buttons">
+			<input type="submit" value="Pimp My Shoes!">
+			<input type="reset" value="Reset">
+		</li>
+	</ul>
+</form>
+</body>
+</html>
