@@ -5,11 +5,12 @@ body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
 }
 body{
 	font-size:12px;
+	color:white;
 }
 a{
 	display:block;
 	text-decoration:none;
-	color:black;
+	color:white;
 }
 header{
 	height:56px;
@@ -46,7 +47,20 @@ header #login{
 	background-position:left;
 	background-repeat:no-repeat;
 	color:white;
+	transition-property:color;
+	transition-duration:0.3s;
 }
 #login:hover, #login:focus{
-	transition:;
+	color:blue;
+}
+#container{
+	height:1210px;
+}
+#container aside{
+	width:260px;
+	height:1210px;
+	background-color:#2b2e3d;
+}
+#container.user{
+	height:150px;
 }
