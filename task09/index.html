@@ -15,15 +15,15 @@
 	<aside>
 		<div class="user">
 			<a id="face"></a>
-			<a id="username">ABC123</a>
+			<a id="username" href="#">ABC123</a>
 			<ul>
 				<li>
-					<p>110</p>
-					<p>收藏</p>
+					<a href="#">110</a>
+					<a href="#">收藏</a>
 				</li>
 				<li>
-					<p>313</p>
-					<p>粉丝</p>
+					<a href="#">313</a>
+					<a href="#">粉丝</a>
 				</li>
 			</ul>
 		</div>
@@ -32,7 +32,7 @@
 				<li>
 					<a href="#">个人报表</a>
 					<ul>
-						<li>文件一</li>
+						<li><a href="#">文件一</a></li>
 						<li>
 							<a href="#">文件二</a>
 							<ul>
@@ -51,6 +51,62 @@
 			</ul>
 		</div>
 	</aside>
+
+	<div class="content">
+		<div class="pathtitle">
+			<ul>
+				<li><a href="#">C站</a></li>
+				<li><a href="#">个人报表</a></li>
+				<li><a href="#">文件一</a></li>
+				<li><a href="#">文档一</a></li>
+			</ul>
+		</div>
+		<form action="" method="">
+			<ul>
+				<li>
+					<label for="form-item">查询项</label>
+					<select name="item" id="form-item">
+						<option>第一项</option>
+						<option>第二项</option>
+					</select>
+				</li>
+				<li>
+					<fieldset>
+						<label>买方</label>
+						<select>
+							<option>小A</option>
+							<option>小C</option>
+						</select>
+						<label>卖方</label>
+						<select>
+							<option>小A</option>
+							<option>小C</option>
+						</select>
+					</fieldset>
+				</li>
+				<li>
+					<fieldset>
+						<label>日期</label>
+						<input type="date" value="2014-04-01">
+						<label>总耗时</label>
+						<select>
+							<option>8天</option>
+							<option>9天</option>
+						</select>
+						<label>人数</label>
+						<select>
+							<option>10人</option>
+						</select>
+						<label>成交项</label>
+						<select>
+							<option>10项</option>
+						</select>
+					</fieldset>
+				</li>
+				<li><input type="submit" value="搜索"></li>
+			</ul>
+		</form>
+	</div>
 </div>
 </body>
 </html>
