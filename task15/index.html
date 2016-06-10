@@ -35,10 +35,13 @@
  * 返回一个数组，格式见函数中示例
  */
 
-var data = [];
 var source = document.getElementById("source");
 function getData() {
-
+  var data = [];
+  for(var i=0,len=source.length; i<len; i++){
+    var a = [];
+    a.push(source.querySelector("li").textContent);
+  }
   /*
   data = [
 	["北京", 90],
