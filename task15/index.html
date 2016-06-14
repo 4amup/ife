@@ -34,21 +34,25 @@
  * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
  * 返回一个数组，格式见函数中示例
  */
-  var source = document.getElementById("source");
-  var data = new Array();
+
 function getData() {
-  /*
-  coding here
-  */
-
-  /*
-  data = [
-    ["北京", 90],
-    ["北京", 90]
-    ……
-  ]
-  */
-
+  var source = document.getElementById("source");
+  var list = source.getElementsByTagName("li");
+  var data = new Array();
+  for (var i = 0; i < list.length; i++) {
+		// 创建小数组，用来储存城市和数值
+		var city_value = new Array();
+		// 提取文本节点的值，并使用slice方法截取城市名
+		var text = list[i].firstChild.nodeValue;
+		var city = text.slice(0,2);
+		city_value[0] = city;
+		// 提取b元素节点中的文本节点，并从字符串格式转换为数字储存
+		var number = list[i].getElementsByTagName("b")[0].firstChild;
+		var num = parseInt(number.nodeValue);
+		city_value[1] = num;
+	  // 将小数组推进大数组中
+	  data.push(city_value);
+  }
   return data;
 
 }
@@ -61,7 +65,6 @@ function getData() {
 function sortAqiData(data) {
 
 }
-
 /**
  * render
  * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
@@ -79,9 +82,9 @@ function btnHandle() {
 
 
 function init() {
-
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-
+  var button = document.getElementById("sort-btn");
+  button.setAttribute("onclick","btnHandle()");
 }
 
 init();
