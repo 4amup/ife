@@ -63,7 +63,11 @@ function getData() {
  * 返回一个排序后的数组
  */
 function sortAqiData(data) {
-
+	data.sort(compare);
+	function compare(var1,var2) {
+		return var2[1] - var1[1];
+	};
+	return data;
 }
 /**
  * render
@@ -71,7 +75,20 @@ function sortAqiData(data) {
  * 格式见ul中的注释的部分
  */
 function render(data) {
+	var resort = document.getElementById("resort");
+	var num = ["一","二","三","四","五","六","七","八","九","十","十一"];
+	for (var i = 0; i < data.length; i++) {
+		var elem = document.createElement("li");
+		var content = "第"+num[i]+"名："+data[i][0]+"空气质量：";
+		var text1 = document.createTextNode(content);
+		elem.appendChild(text1);
 
+		var bold = document.createElement("b");
+		var text2 = document.createTextNode(data[i][1]);
+		bold.appendChild(text2);
+		elem.appendChild(bold);
+		resort.appendChild(elem);
+	}
 }
 
 function btnHandle() {
