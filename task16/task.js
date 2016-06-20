@@ -32,10 +32,12 @@ function addAqiData() {
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-	var table = document.getElementById("aqi-table");
-	var tableRow = document.createElement("tr");
-	tableRow.innerHTML = "<td>"+city+"</td><td>"+aqiValue+"</td><td><button>删除</button></td>";
-	table.appendChild(tableRow);
+	if (city&&aqiValue) {
+		var table = document.getElementById("aqi-table");
+		var tableRow = document.createElement("tr");
+		tableRow.innerHTML = "<td>"+city+"</td><td>"+aqiValue+"</td><td><button>删除</button></td>";
+		table.appendChild(tableRow);
+	}
 }
 /**
  * 点击add-btn时的处理逻辑
