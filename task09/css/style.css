@@ -88,4 +88,7 @@ header #login{
   display:inline-block;
   float:left;
 }
-＃container.
+#container.price div{
+  display: inline;
+  float: left;
+}
