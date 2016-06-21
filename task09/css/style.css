@@ -1,90 +1,91 @@
 /* reset */
 body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td{
-	padding:0px;
-	margin:0px;
+  padding:0px;
+  margin:0px;
 }
 li{
-	list-style:none;
+  list-style:none;
 }
 
 body{
-	font-size:14px;
-	font-family:黑体;
+  font-size:14px;
+  font-family:黑体;
 }
 a{
-	display:block;
-	text-decoration:none;
-	color:grey;
+  display:block;
+  text-decoration:none;
+  color:grey;
 }
 header{
-	height:56px;
-	background-color:#2189bf;
-	display:block;
-	overflow:hidden;
+  height:56px;
+  background-color:#2189bf;
+  display:block;
+  overflow:hidden;
 }
 header #logo{
-	background-image:url("../img/logo.png");
-	background-position:center;
-	background-repeat:no-repeat;
-	float:left;
-	width:36px;
-	height:56px;
-	margin:0 50px
+  background-image:url("../img/logo.png");
+  background-position:center;
+  background-repeat:no-repeat;
+  float:left;
+  width:36px;
+  height:56px;
+  margin:0 50px
 }
 header input{
-	float:right;
-	width:230px;
-	height:22px;
-	border-radius:11px;
-	border:none;
-	background-image:url("../img/search.png");
-	background-repeat:no-repeat;
-	background-position:1em;
-	padding:0 2em;
-	margin:15px 0;
+  float:right;
+  width:230px;
+  height:22px;
+  border-radius:11px;
+  border:none;
+  background-image:url("../img/search.png");
+  background-repeat:no-repeat;
+  background-position:1em;
+  padding:0 2em;
+  margin:15px 0;
 }
 header #login{
-	float:right;
-	line-height:56px;
-	font-size:12px;
-	margin:0 2em;
-	padding:0 1.5em;
-	background-image:url("../img/login.png");
-	background-position:left;
-	background-repeat:no-repeat;
-	color:white;
-	transition-property:color;
-	transition-duration:0.3s;
+  float:right;
+  line-height:56px;
+  font-size:12px;
+  margin:0 2em;
+  padding:0 1.5em;
+  background-image:url("../img/login.png");
+  background-position:left;
+  background-repeat:no-repeat;
+  color:white;
+  transition-property:color;
+  transition-duration:0.3s;
 }
 #login:hover, #login:focus{
-	color:blue;
+  color:blue;
 }
 #container{
-	width:1280px;
-	height:1210px;
-	background-color:#ececec;
+  width:1280px;
+  height:1210px;
+  background-color:#ececec;
 }
 #container aside{
-	width:260px;
-	height:1210px;
-	background-color:#2b2e3d;
-	float:left;
+  width:260px;
+  height:1210px;
+  background-color:#2b2e3d;
+  float:left;
 }
 #container .user{
-	height:150px;
+  height:150px;
 }
 #container .content{
-	display:inline-block;
-	float:right;
-	width:1020px;
+  display:inline-block;
+  float:right;
+  width:1020px;
 }
 #container .pathtitle{
-	background-color:white;
-	height:32px;
-	line-height:32px;
-	/*overflow:hidden;*/
+  background-color:white;
+  height:32px;
+  line-height:32px;
+  /*overflow:hidden;*/
 }
 #container .pathtitle li{
-	display:inline-block;
-	float:left;
+  display:inline-block;
+  float:left;
 }
+＃container.
