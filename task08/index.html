@@ -2,13 +2,16 @@
 <html>
 <head>
   <title>task08 bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initail-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <style type="text/css">
     /*这是一个子串选择器，支持开头^结尾$任意*三种子串,任何属性都可使用*/
     div[class*="col-"]{
-      background-color: grey;
+      background-color: #eee;
       color: red;
-      border: 1px black solid;
+      border: 1px #999 solid;
+      height: 50px;
     }
   </style>
 </head>
@@ -18,7 +21,47 @@
       <div class="col-xs-6">bootstrap</div>
       <div class="col-xs-6">bootstrap</div>
     </div>
-    <div></div>
+    <div class="row">
+      <div class="col-xs-12">bootstrap</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">bootstrap</div>
+      <div class="col-xs-6">bootstrap</div>
+      <div class="col-xs-3">bootstrap</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">bootstrap</div>
+      <div class="col-xs-2">bootstrap</div>
+      <div class="col-xs-8">bootstrap</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">bootstrap</div>
+      <div class="col-xs-3">bootstrap</div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4">bootstrap</div>
+      <div class="col-xs-6 col-sm-4">bootstrap</div>
+<!--     </div>
+    <div class="row"> -->
+      <div class="col-xs-12 col-sm-4">bootstrap</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">bootstrap</div>
+      <div class="col-xs-6">bootstrap</div>
+      <div class="col-xs-3">bootstrap</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2 col-sm-1">bootstrap</div>
+      <div class="col-xs-2 col-sm-1">bootstrap</div>
+      <div class="col-xs-8 col-sm-2">bootstrap</div>
+<!--     </div>
+    <div class="row">
+ -->      <div class="col-xs-3 col-sm-2">bootstrap</div>
+      <div class="col-xs-3 col-sm-6">bootstrap</div>
+    </div>
   </div>
 </body>
 </html>
