@@ -5,23 +5,40 @@
 }
 body {
 	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
-div {
-	border: 1px red solid;
+[class*="item"] {
+	border: 1px #f00 solid;
 	width: 150px;
 	height: 200px;
 	padding: 20px;
+	margin: 5px;
 }
-#div1{
+.item1{
+	height: 200px;
+	border-color: #00f;
+	order: -1;
+}
+.item2{
 	height: 120px;
-	order: 1;
 }
-#div2{
+.item3{
 	height: 100px;
 }
-#div3{
+.item4{
 	height: 40px;
+	align-items: flex-start;
 }
-#div4{
-	height: 200px;
+@media screen and (min-width: 640px) {
+	body {
+		background-color: tomato;
+		justify-content: space-between;
+		flex-flow: row nowrap;
+		align-content: space-between;
+		align-items: center;
+	}
+	.item1 {
+		order: 99;
+	}
 }
