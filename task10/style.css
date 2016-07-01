@@ -10,12 +10,11 @@ div {
 	border: 1px red solid;
 	width: 150px;
 	height: 200px;
-	margin: 30px;
 	padding: 20px;
 }
 #div1{
 	height: 120px;
-	margin-left: 0;
+	order: 1;
 }
 #div2{
 	height: 100px;
