@@ -97,7 +97,7 @@ nav ul li a:hover{
 }
 .labels div {
   width: 16.67%;
-  border-bottom: grey .1rem solid;
+  border-bottom: grey .05rem solid;
 }
 .labels p{
   margin: .5rem 0 .5rem 0;
@@ -111,7 +111,7 @@ nav ul li a:hover{
 .columns div {
   width: 33.33%;
   padding: inherit;
-  border-right: grey .1rem solid;
+  border-right: grey .05rem solid;
 }
 .columns div:last-child {
   border-right: none;
