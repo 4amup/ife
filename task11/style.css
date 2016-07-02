@@ -1,11 +1,65 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+html {
+  font-size: 20px;
+}
+h1 {
+  font-size: 1.2rem;
+}
+h2 {
+  font-size: 1.1rem;
+}
+h3 {
+  font-size: 1.0rem;
+}
+h4 {
+  font-size: 0.9rem;
+}
+body {
+  font-size: 0.6rem;
+}
 .container {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.head {
+  background-color: #ade;
+  height: 2rem;
+}
+nav {
+  height: 2rem;
+}
+nav li {
+  width: 20%;
+}
+nav ul li a{
+  height: 2rem;
+  line-height: 2rem;
+  width: 100%;
+  text-align: center;
+}
+nav ul li a:hover{
+  border-bottom: #ade solid .2rem;
+}
+.banner {
+  background-image: url("images/batman_1.png");
+  background-color: rgba(235,211,194,.4);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 10rem;
 }
