@@ -15,7 +15,7 @@ html {
   font-size: 20px;
 }
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 h2 {
   font-size: 1.1rem;
@@ -38,7 +38,19 @@ body {
 }
 .head {
   background-color: #ade;
+  color: white;
   height: 2rem;
+  font-size: 1rem;
+  justify-content: center;
+}
+.head h1 {
+  justify-content: center;
+}
+.head a{
+  position: absolute;
+  left: .2rem;
+  line-height: 2rem;
+  color: white;
 }
 nav {
   height: 2rem;
