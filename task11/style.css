@@ -1,0 +1,194 @@
+/*initail----------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+a, i {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+/*fontsize---------------------------------------*/
+html {
+  font-size: 20px;
+}
+h1 {
+  font-size: 1.15rem;
+}
+h2 {
+  font-size: 1.1rem;
+}
+h3 {
+  font-size: 1.0rem;
+}
+h4 {
+  font-size: 0.9rem;
+}
+body {
+  font-size: 0.6rem;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+/*layout------------------------------------------*/
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+}
+/*head---------------------------------------------*/
+.head {
+  background-color: #ade;
+  color: white;
+  height: 2rem;
+  font-size: 1rem;
+  justify-content: center;
+}
+.head h1 {
+  justify-content: center;
+}
+.head a{
+  position: absolute;
+  left: .2rem;
+  line-height: 2rem;
+  color: white;
+}
+/*navigation---------------------------------------*/
+nav {
+  height: 2rem;
+}
+nav li {
+  width: 20%;
+}
+nav ul li a{
+  height: 2rem;
+  line-height: 2rem;
+  width: 100%;
+  text-align: center;
+}
+nav ul li a:hover{
+  border-bottom: #ade solid .2rem;
+}
+/*banner---------------------------------------------*/
+.banner {
+  background-image: url("images/batman_1.png");
+  background-color: rgba(235,211,194,.4);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 10rem;
+}
+/*label---------------------------------------------*/
+.labels {
+  height: 6rem;
+  padding: .5rem;
+}
+.labels i {
+  display: inline-block;
+  background-image: url("images/text_icon.svg");
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+}
+.labels div {
+  width: 16.67%;
+  border-bottom: grey .05rem solid;
+}
+.labels p{
+  margin: .5rem 0 .5rem 0;
+}
+/*columns------------------------------------------*/
+.columns {
+  height: 8rem;
+  padding: .5rem;
+  margin-bottom: .5rem;
+}
+.columns div {
+  width: 33.33%;
+  border-right: grey .05rem solid;
+}
+.columns div:last-child {
+  border-right: none;
+}
+.columns i{
+  display: inline-block;
+  background-image: url("images/batman_4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width:100%;
+  height: 5rem;
+}
+/*modules-------------------------------------------*/
+.modules {
+  margin-bottom: .5rem;
+  display: inline-block;
+  padding: 0 .5rem 0 .5rem;
+}
+.modules>div {
+  margin: .5rem 0 .5rem 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  align-items: center;
+}
+.modules h2 {
+  text-align: left;
+  line-height: 2rem;
+  height: 2rem;
+}
+.modules img {
+  border: red 1px solid;
+  width: 5rem;
+  height: 5rem;
+}
+.modules ul {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+.modules li {
+  width: 45%;
+  height: 2.5rem;
+  margin: .2rem;
+  line-height: 2.5rem;
+  background-color: #f5f5f5;
+  display: inline-block;
+}
+/*article-------------------------------------------*/
+.articles{
+  background-color: white;
+  padding: 0 .5rem 0 .5rem;
+}
+.articles img {
+  width: 33%;
+  margin-right: .15rem;
+}
+.articles div.container {
+  justify-content: flex-start;
+  align-content: space-between;
+  padding: .5rem 0 .5rem 0;
+  border-bottom: grey .05rem solid;
+}
+.articles header{
+  padding: 0.5rem;
+}
+#col-layout {
+  display: inline-block;
+  border: none;
+}
+#col-layout div {
+  border: none;
+}
+/*footer------------------------------------------*/
+footer {
+  height: 5rem;
+}
