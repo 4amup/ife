@@ -36,3 +36,9 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(-n+3) {
 	color: red;
 }
+input {
+	width: 150px;
+}
+input:focus {
+	width: 300px;
+}
