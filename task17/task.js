@@ -72,9 +72,9 @@ function graTimeChange() {
 /**
  * select发生变化时的处理函数
  */
-function citySelectChange() {
+function citySelectChange(value) {
   // 确定是否选项发生了变化 
-
+  console.log(value);
   // 设置对应数据
 
   // 调用图表渲染函数
@@ -103,7 +103,8 @@ function initCitySelector() {
   }
   selectCity.innerHTML = options;
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
-
+  selectCity.setAttribute("onchange","citySelectChange(this.value)");
+  console.log(this.value);
 }
 
 /**
