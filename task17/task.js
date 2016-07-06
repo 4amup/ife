@@ -92,7 +92,16 @@ function initGraTimeForm() {
  */
 function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
-
+  var selectCity = document.getElementById("city-select");
+  var city = [];
+  for (var i in aqiSourceData) {
+  	city.push(i);
+  }
+  var options="";
+  for (var i = 0; i < city.length; i++) {
+  	options += "<option>"+city[i]+"</option>";
+  }
+  selectCity.innerHTML = options;
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
 
 }
