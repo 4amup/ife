@@ -5,16 +5,31 @@
 </head>
 <body>
 <form>
-	<input type="number" name="textnote">
-	<button>左侧入</button>
-	<button>右侧入</button>
+	<input type="text" name="textnote">
+	<button class="push">左侧入</button>
+	<button class="push">右侧入</button>
 	&nbsp
   &nbsp
   &nbsp
-	<button>左侧出</button>
-	<button>右侧出</button>
+	<button class="pull">左侧出</button>
+	<button class="pull">右侧出</button>
   <script type="text/javascript">
+    var array = [];
+    var pushNodes = getElementsByClassName("push");
+    var pullNodes = getElementsByClassName("pull");
+    //准备委托事件
+    
+    function pushNumber(direction) {
+      var number = input.value();
+      if (direction="left") {
 
+      } else {
+
+      }
+    }
+    function pullNumber(direction) {
+      // body...
+    }
   </script>
 </form>
 </body>
