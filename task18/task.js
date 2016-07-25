@@ -2,16 +2,11 @@ var pushLeft = document.getElementById('pushLeft');
 var pushRight = document.getElementById('pushRight');
 var pullLeft = document.getElementById('pullLeft');
 var pullRight = document.getElementById('pullRight');
-
 var ul = document.createElement('ul');
-
 var array = [];
 var input = document.getElementsByTagName('input')[0];
 //初始化函数，然后再定义几个变量
 function funcDelegation(event) {
-  if (!input.value) {
-    alert('please input number!')
-    return false};
     switch(event.target)
   {
     case pushLeft:
@@ -24,23 +19,34 @@ function funcDelegation(event) {
       addNumber(array);
       break;
     case pullLeft:
-      //
+      alert(array.shift());
+      addNumber(array);
       break;
     case pullRight:
-      //
+      alert(array.pop());
+      addNumber(array);
       break;
   }
-  event.stopPropagation();
+}
+function numberDelegation(event) {
+  if (event.target.tagName == "LI") {
+    event.target.parentNode.removeChild(event.target);
+  }
 }
 function addNumber(array) {
+  if(!input.value) {
+    alert('please input a number!');
+    return false;
+  }
   var content = '';
   for(i in array){
-    content+='<li>'+array[i]+'</li>';
+    content+='<li id="number'+i+'">'+array[i]+'</li>';
   };
   ul.innerHTML = content;
-  document.body.appendChild(ul);
+  return document.body.appendChild(ul);
 }
 function init() {
   document.body.addEventListener('click',funcDelegation,false);
+  document.body.addEventListener('click',numberDelegation,false);
 };
 init();
