@@ -5,7 +5,7 @@ var pullRight = document.getElementById('pullRight');
 var ul = document.createElement('ul');
 var array = [];
 var input = document.getElementsByTagName('input')[0];
-//初始化函数，然后再定义几个变量
+//代理button的点击事件
 function funcDelegation(event) {
     switch(event.target)
   {
@@ -28,6 +28,7 @@ function funcDelegation(event) {
       break;
   }
 }
+//代理标签的删除事件
 function numberDelegation(event) {
   if (event.target.tagName == "LI") {
     event.target.parentNode.removeChild(event.target);
