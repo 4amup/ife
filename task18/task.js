@@ -15,7 +15,7 @@ function funcDelegation(event) {
         return ul.insertBefore(item,ul.firstChild);
       }else{
         alert("请输入1-100数字！");
-      };
+      }
       break;
     case pushRight:
       if (input.value) {
@@ -24,21 +24,21 @@ function funcDelegation(event) {
         return ul.appendChild(item);
       } else {
         alert("请输入1-100数字！");
-      };
+      }
       break;
     case pullLeft:
       if (ul.childNodes.length) {
         alert(ul.removeChild(ul.firstChild).textContent);
       } else {
         alert("当前列表为空，请输入数字后再执行删除操作！");
-      };
+      }
       break;
     case pullRight:
       if (ul.childNodes.length) {
         alert(ul.removeChild(ul.lastChild).textContent);
       } else {
         alert("当前列表为空，请输入数字后再执行删除操作！");
-      };
+      }
       break;
   }
   document.body.appendChild(ul);
@@ -52,5 +52,5 @@ function numberDelegation(event) {
 function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
-};
+}
 init();
