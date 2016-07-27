@@ -1,3 +1,5 @@
+
+
 var pushLeft = document.getElementById('pushLeft');
 var pushRight = document.getElementById('pushRight');
 var pullLeft = document.getElementById('pullLeft');
@@ -5,26 +7,37 @@ var pullRight = document.getElementById('pullRight');
 var ul = document.createElement('ul');
 var array = [];
 var input = document.getElementsByTagName('input')[0];
+function test() {
+  if(!input.value) {
+    alert('please input a number!');
+  };
+  return false;
+}
 //代理button的点击事件
 function funcDelegation(event) {
     switch(event.target)
   {
     case pushLeft:
-      //alert("hello");
+      test();
       array.unshift(input.value);
       addNumber(array);
       break;
     case pushRight:
+      test();
       array.push(input.value);
       addNumber(array);
       break;
     case pullLeft:
-      alert(array.shift());
+      test();
+      var item = array.shift();
       addNumber(array);
+      alert(item);
       break;
     case pullRight:
-      alert(array.pop());
+      test();
+      var item = array.pop();
       addNumber(array);
+      alert(item);
       break;
   }
 }
@@ -35,10 +48,6 @@ function numberDelegation(event) {
   }
 }
 function addNumber(array) {
-  if(!input.value) {
-    alert('please input a number!');
-    return false;
-  }
   var content = '';
   for(i in array){
     content+='<li id="number'+i+'">'+array[i]+'</li>';
