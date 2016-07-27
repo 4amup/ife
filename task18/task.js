@@ -7,37 +7,41 @@ var pullRight = document.getElementById('pullRight');
 var ul = document.createElement('ul');
 var array = [];
 var input = document.getElementsByTagName('input')[0];
-function test() {
-  if(!input.value) {
-    alert('please input a number!');
-  };
-  return false;
-}
 //代理button的点击事件
 function funcDelegation(event) {
     switch(event.target)
   {
     case pushLeft:
-      test();
-      array.unshift(input.value);
-      addNumber(array);
+      if (input.value) {
+        array.unshift(input.value);
+        addNumber(array);
+      }else{
+        alert("请输入1-100数字！");
+      };
       break;
     case pushRight:
-      test();
-      array.push(input.value);
-      addNumber(array);
+      if (input.value) {
+        array.push(input.value);
+        addNumber(array);
+      } else {
+        alert("请输入1-100数字！");
+      };
       break;
     case pullLeft:
-      test();
-      var item = array.shift();
-      addNumber(array);
-      alert(item);
+      if (array.length) {
+        alert(array.shift());
+        addNumber(array);
+      } else {
+        alert("当前数组为空，请输入数字后再执行删除操作！");
+      };
       break;
     case pullRight:
-      test();
-      var item = array.pop();
-      addNumber(array);
-      alert(item);
+      if (array.length) {
+        alert(array.pop());
+        addNumber(array);
+      } else {
+        alert("当前数组为空，请输入数字后再执行删除操作！");
+      };
       break;
   }
 }
