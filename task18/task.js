@@ -5,7 +5,7 @@ var pushRight = document.getElementById('pushRight');
 var pullLeft = document.getElementById('pullLeft');
 var pullRight = document.getElementById('pullRight');
 var ul = document.createElement('ul');
-var array = [];
+// var array = [];
 var input = document.getElementsByTagName('input')[0];
 //代理button的点击事件
 function funcDelegation(event) {
@@ -13,37 +13,38 @@ function funcDelegation(event) {
   {
     case pushLeft:
       if (input.value) {
-        array.unshift(input.value);
-        addNumber(array);
+        var item = document.createElement('li');
+        item.textContent = input.value;
+        return ul.insertBefore(item,ul.firstChild);
       }else{
         alert("请输入1-100数字！");
       };
       break;
     case pushRight:
       if (input.value) {
-        array.push(input.value);
-        addNumber(array);
+        var item = document.createElement('li');
+        item.textContent = input.value;
+        return ul.appendChild(item);
       } else {
         alert("请输入1-100数字！");
       };
       break;
     case pullLeft:
-      if (array.length) {
-        alert(array.shift());
-        addNumber(array);
+      if (ul.childNodes.length) {
+        alert(ul.removeChild(ul.lastChild).textContent);
       } else {
-        alert("当前数组为空，请输入数字后再执行删除操作！");
+        alert("当前列表为空，请输入数字后再执行删除操作！");
       };
       break;
     case pullRight:
-      if (array.length) {
-        alert(array.pop());
-        addNumber(array);
+      if (ul.childNodes.length) {
+        alert(ul.removeChild(ul.lastChild).textContent);
       } else {
-        alert("当前数组为空，请输入数字后再执行删除操作！");
+        alert("当前列表为空，请输入数字后再执行删除操作！");
       };
       break;
   }
+  document.body.appendChild(ul);
 }
 //代理标签的删除事件
 function numberDelegation(event) {
@@ -51,14 +52,14 @@ function numberDelegation(event) {
     event.target.parentNode.removeChild(event.target);
   }
 }
-function addNumber(array) {
-  var content = '';
-  for(i in array){
-    content+='<li id="number'+i+'">'+array[i]+'</li>';
-  };
-  ul.innerHTML = content;
-  return document.body.appendChild(ul);
-}
+// function addNumber(array) {
+//   var content = '';
+//   for(i in array){
+//     content+='<li id="number'+i+'">'+array[i]+'</li>';
+//   };
+//   ul.innerHTML = content;
+//   return document.body.appendChild(ul);
+// }
 function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
