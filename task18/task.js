@@ -1,12 +1,9 @@
-
-
 var pushLeft = document.getElementById('pushLeft');
-var pushRight = document.getElementById('pushRight');
-var pullLeft = document.getElementById('pullLeft');
-var pullRight = document.getElementById('pullRight');
-var ul = document.createElement('ul');
-// var array = [];
-var input = document.getElementsByTagName('input')[0];
+    pushRight = document.getElementById('pushRight');
+    pullLeft = document.getElementById('pullLeft');
+    pullRight = document.getElementById('pullRight');
+    ul = document.createElement('ul');
+    input = document.getElementsByTagName('input')[0];
 //代理button的点击事件
 function funcDelegation(event) {
     switch(event.target)
@@ -52,14 +49,6 @@ function numberDelegation(event) {
     event.target.parentNode.removeChild(event.target);
   }
 }
-// function addNumber(array) {
-//   var content = '';
-//   for(i in array){
-//     content+='<li id="number'+i+'">'+array[i]+'</li>';
-//   };
-//   ul.innerHTML = content;
-//   return document.body.appendChild(ul);
-// }
 function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
