@@ -31,7 +31,7 @@ function funcDelegation(event) {
       break;
     case pullLeft:
       if (ul.childNodes.length) {
-        alert(ul.removeChild(ul.lastChild).textContent);
+        alert(ul.removeChild(ul.firstChild).textContent);
       } else {
         alert("当前列表为空，请输入数字后再执行删除操作！");
       };
