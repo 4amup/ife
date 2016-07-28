@@ -3,19 +3,25 @@ body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
   padding:0px;
   margin:0px;
 }
+/*all*/
 li{
   list-style:none;
 }
-
+html{
+  height: 100%;
+}
 body{
+  height: inherit;
   font-size:14px;
   font-family:黑体;
+  background-color: #ececec;
 }
 a{
   display:block;
   text-decoration:none;
   color:grey;
 }
+/*header*/
 header{
   height:56px;
   background-color:#2189bf;
@@ -57,38 +63,17 @@ header #login{
   transition-duration:0.3s;
 }
 #login:hover, #login:focus{
-  color:blue;
+  color:black;
 }
+/*container*/
 #container{
-  width:1280px;
-  height:1210px;
-  background-color:#ececec;
+  /*min和max的区别还是不算太明白*/
+  min-width: 900px;
 }
-#container aside{
-  width:260px;
-  height:1210px;
-  background-color:#2b2e3d;
-  float:left;
+/*aside*/
+aside{
+  width: 260px;
+  height: 100%;
+  background-color: #2a2d3c;
 }
-#container .user{
-  height:150px;
-}
-#container .content{
-  display:inline-block;
-  float:right;
-  width:1020px;
-}
-#container .pathtitle{
-  background-color:white;
-  height:32px;
-  line-height:32px;
-  /*overflow:hidden;*/
-}
-#container .pathtitle li{
-  display:inline-block;
-  float:left;
-}
-#container.price div{
-  display: inline;
-  float: left;
-}
+/*content*/
