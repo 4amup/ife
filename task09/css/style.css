@@ -7,7 +7,11 @@ body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
 li{
   list-style:none;
 }
+html{
+  height: 100%;
+}
 body{
+  height: inherit;
   font-size:14px;
   font-family:黑体;
   background-color: #ececec;
@@ -61,3 +65,15 @@ header #login{
 #login:hover, #login:focus{
   color:black;
 }
+/*container*/
+#container{
+  /*min和max的区别还是不算太明白*/
+  min-width: 900px;
+}
+/*aside*/
+aside{
+  width: 260px;
+  height: 100%;
+  background-color: #2a2d3c;
+}
+/*content*/
