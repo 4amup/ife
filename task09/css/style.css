@@ -65,15 +65,25 @@ header #login{
 #login:hover, #login:focus{
   color:black;
 }
-/*container*/
-#container{
-  /*min和max的区别还是不算太明白*/
-  min-width: 900px;
-}
 /*aside*/
 aside{
   width: 260px;
   height: 100%;
   background-color: #2a2d3c;
+  /*使用绝对定位，并使aside显示于最底层*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-/*content*/
+/*container*/
+#container{
+  margin-left: 260px;
+  min-width: 1020px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /*以下位置放调试代码*/
+  background-color: red;
+  height: 100px;
+}
