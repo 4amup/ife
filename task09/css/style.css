@@ -146,3 +146,8 @@ aside{
   background-repeat:no-repeat;
   background-position: 10px
 }
+.history>p{
+  height: 100%;
+  line-height: 45px;
+  padding-left: 30px;
+}
