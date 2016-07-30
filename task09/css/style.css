@@ -105,6 +105,26 @@ aside{
   /*以下是调试代码*/
   background-color: red;
 }
+/*第一栏表单查询*/
+.block.form{
+  height: 90px;
+  background-color: white;
+}
+.block.form form{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: center;
+}
+.block.form form>div{
+  display: flex;
+  padding: 10px;
+  flex-flow: row wrap;
+}
+.block.form label{
+  color: grey;
+}
 /*价格第二栏*/
 .block.price{
   height: 65px;

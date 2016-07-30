@@ -18,9 +18,62 @@
     <header>
       <p> C站 / 个人报表 / 文件一 / 文档一</p>
     </header>
-    <div class="block">
-      <form method="" action="">
-        
+    <div class="block form">
+      <form action="" method="post">
+        <div>
+          <label for="nth">查询项</label>
+          <select id="nth">
+            <option>第一项</option>
+            <option>第二项</option>
+            <option>第三项</option>
+            <option>第四项</option>
+            <option>第五项</option>
+          </select>
+        </div>
+        <div>
+          <label>买方</label>
+          <select>
+            <option>小A</option>
+            <option>小B</option>
+            <option>小C</option>
+            <option>小D</option>
+          </select>
+          <label>卖方</label>
+          <select>
+            <option>小A</option>
+            <option>小B</option>
+            <option>小C</option>
+            <option>小D</option>
+          </select>
+        </div>
+        <div>
+          <label>日期</label>
+          <input type="date" name="date" value="2016-04-01">
+          <label>总耗时</label>
+          <select>
+            <option>8天</option>
+            <option>7天</option>
+            <option>6天</option>
+            <option>5天</option>
+          </select>
+          <label>人数</label>
+          <select>
+            <option>10人</option>
+            <option>9人</option>
+            <option>8人</option>
+            <option>7人</option>
+          </select>
+          <label>成交项</label>
+          <select>
+            <option>10项</option>
+            <option>9项</option>
+            <option>8项</option>
+            <option>7项</option>
+          </select>
+        </div>
+        <div>
+          <input type="submit" name="submit" value="搜索">
+        </div>
       </form>
     </div>
     <div class="block price">
