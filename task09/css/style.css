@@ -2,6 +2,7 @@
 body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td{
   padding:0px;
   margin:0px;
+  box-sizing: border-box;
 }
 /*all*/
 li{
@@ -12,7 +13,7 @@ html{
 }
 body{
   height: inherit;
-  font-size:14px;
+  font-size:12px;
   font-family:黑体;
   background-color: #ececec;
 }
@@ -22,13 +23,13 @@ a{
   color:grey;
 }
 /*header*/
-header{
+#header{
   height:56px;
   background-color:#2189bf;
   display:block;
   overflow:hidden;
 }
-header #logo{
+#header #logo{
   background-image:url("../img/logo.png");
   background-position:center;
   background-repeat:no-repeat;
@@ -37,7 +38,7 @@ header #logo{
   height:56px;
   margin:0 50px
 }
-header input{
+#header input{
   float:right;
   width:230px;
   height:22px;
@@ -49,10 +50,9 @@ header input{
   padding:0 2em;
   margin:15px 0;
 }
-header #login{
+#login{
   float:right;
   line-height:56px;
-  font-size:12px;
   margin:0 2em;
   padding:0 1.5em;
   background-image:url("../img/login.png");
@@ -81,17 +81,68 @@ aside{
   margin-left: 260px;
   min-width: 1020px;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: center;
   /*以下位置放调试代码*/
-  background-color: red;
-  height: 100px;
+  /*background-color: red;*/
+  /*height: 100px;*/
 }
 #container header{
+  color: grey;
   width: 100%;
+}
+#container header p{
   height: 30px;
   background-color: white;
-  color: grey;
   line-height: 30px;
-  padding-left: 50px;
+  padding-left: 30px;
+}
+/*block*/
+.block{
+  width: 90%;
+  height: 50px;
+  margin: 15px;
+  /*以下是调试代码*/
+  background-color: red;
+}
+/*价格第二栏*/
+.block.price{
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+.block>div{
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+/*价格标签里的几个小块*/
+.direction{
+  width: 2.5%;
+  background-image: url(../img/right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.direction:first-child{
+  transform: rotate(180deg);
+}
+.pricetag{
+  width: 13%;
+}
+.pricetag:hover{
+  border-top: 3px #2189bf solid;
+}
+.pricetag p:first-letter{
+  color: grey;
+  font-size: 16px;
+}
+.pricetag p{
+  font-size: 2em;
+  color: chocolate;
+}
+.history{
+  width: 13%;
+  background-image: url(../img/history.png);
+  background-repeat:no-repeat;
+  background-position: 10px
 }
