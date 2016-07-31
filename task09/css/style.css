@@ -230,33 +230,33 @@ input[type="submit"]{
   flex-flow: column;
   align-content: space-between;
 }
-.volume>div .colorblock{
+.volume .item .colorblock{
   width: 60px;
   height: 50px;
   margin: auto 0;
 }
-.volume>div:nth-child(1){
+.volume .item:nth-child(2){
   border-color: #41b09d;
 }
-.volume>div:nth-child(1) .colorblock{
+.volume .item:nth-child(2) .colorblock{
   background-color: #41b09d;
 }
-.volume>div:nth-child(2){
+.volume .item:nth-child(3){
   border-color: #3a8ac0 ;
 }
-.volume>div:nth-child(2) .colorblock{
+.volume .item:nth-child(3) .colorblock{
   background-color: #3a8ac0;
 }
-.volume>div:nth-child(3){
+.volume .item:nth-child(4){
   border-color: #cd4935;
 }
-.volume>div:nth-child(3) .colorblock{
+.volume .item:nth-child(4) .colorblock{
   background-color: #cd4935;
 }
-.volume>div:nth-child(4){
+.volume .item:nth-child(5){
   border-color: #e0cc49 ;
 }
-.volume>div:nth-child(4) .colorblock{
+.volume .item:nth-child(5) .colorblock{
   background-color: #e0cc49;
 }
 /*第四栏内容 content主要内容*/
@@ -270,8 +270,8 @@ input[type="submit"]{
   margin: 0;
   border-bottom: none;
   background-color: #ececec;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
  }
 #container .content header p{
   text-align: left;
@@ -282,7 +282,7 @@ input[type="submit"]{
   height: 350px;
   padding: 0;
   margin: 5px 0;
-  border-radius: 10px;
+  border-radius: 5px;
   /*调试代码*/
 }
 .content .datacontainer:nth-child(1),.content .datacontainer:nth-child(4){
