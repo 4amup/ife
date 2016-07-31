@@ -25,6 +25,7 @@ a{
 /*header*/
 #header{
   height:56px;
+  min-width: 1280px;
   background-color:#2189bf;
   display:block;
   overflow:hidden;
@@ -68,7 +69,7 @@ a{
 /*aside*/
 aside{
   width: 260px;
-  height: 100%;
+  height: 500%;
   background-color: #2a2d3c;
   /*使用绝对定位，并使aside显示于最底层*/
   position: absolute;
@@ -106,25 +107,30 @@ aside{
 /*block*/
 .block{
   width: 90%;
-  height: 50px;
   margin: 15px;
   /*以下是调试代码*/
-  background-color: red;
+  /*background-color: red;*/
+}
+.block>div{
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 1px grey;
 }
 /*第一栏表单查询*/
-.block.form{
+.form{
   height: 90px;
   background-color: white;
 }
 .block.form select,input{
   margin: 5px;
 }
-.block.form form{
+.form form{
   height: 100%;
   display: flex;
   flex-wrap: row wrap;
 }
-.block.form form>div{
+.form form>div{
   display: flex;
   margin: auto;
   padding: 10px;
@@ -161,10 +167,8 @@ input[type="submit"]{
   display: flex;
   justify-content: space-between;
 }
-.block>div{
-  background-color: white;
+.block .price>div{
   padding: 10px;
-  text-align: center;
 }
 /*价格标签里的几个小块*/
 .direction{
@@ -205,10 +209,15 @@ input[type="submit"]{
 /*成交量 第三栏*/
 .volume{
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
+.volume>p{
+  width: 100%;
+  padding: 5px 0;
+}
 .volume>div{
-  width: 200px;
+  width: 22%;
   height: 75px;
   display: flex;
   flex: row nowrap;
@@ -249,4 +258,54 @@ input[type="submit"]{
 }
 .volume>div:nth-child(4) .colorblock{
   background-color: #e0cc49;
+}
+/*第四栏内容 content主要内容*/
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#container .content header{
+  height: 40px;
+  margin: 0;
+  border-bottom: none;
+  background-color: #ececec;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+ }
+#container .content header p{
+  text-align: left;
+  line-height: 40px;
+}
+.content .datacontainer{
+  width: 39%;
+  height: 350px;
+  padding: 0;
+  margin: 5px 0;
+  border-radius: 10px;
+  /*调试代码*/
+}
+.content .datacontainer:nth-child(1),.content .datacontainer:nth-child(4){
+  width: 60%;
+}
+/*brandlist 汽车品牌排行榜*/
+.content .brandlist .table{
+  overflow: auto;
+  height: 80%;
+
+}
+.content .brandlist table{
+  border-collapse: collapse;
+  margin: 1em auto;
+  width: 450px;
+}
+table,th,td{
+  border: 2px #ececec solid;
+  /*box-shadow: 0 0 1px grey;*/
+}
+th,td{
+  padding: 5px 16px;
+}
+table>tbody>tr:hover{
+  background-color: #ececec;
 }
