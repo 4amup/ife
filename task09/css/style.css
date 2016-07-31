@@ -89,7 +89,7 @@ aside{
 }
 #container p{
   font-family: Microsotf Yahei;
-  padding: .5em;
+  margin: auto;
 }
 #container header{
   color: grey;
@@ -216,11 +216,15 @@ input[type="submit"]{
   border-left: 3px solid;
   border-radius: 2px;
 }
+.volume>div>div{
+  display: flex;
+  flex-flow: column;
+  align-content: space-between;
+}
 .volume>div .colorblock{
   width: 60px;
   height: 50px;
   margin: auto 0;
-/*  background-color: blue;*/
 }
 .volume>div:nth-child(1){
   border-color: #41b09d;
