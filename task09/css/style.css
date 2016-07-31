@@ -87,15 +87,21 @@ aside{
   /*background-color: red;*/
   /*height: 100px;*/
 }
+#container p{
+  font-family: Microsotf Yahei;
+  padding: .5em;
+}
 #container header{
   color: grey;
   width: 100%;
-}
-#container header p{
   height: 30px;
   background-color: white;
+}
+#container header p{
   line-height: 30px;
-  padding-left: 30px;
+  padding: 0;
+  padding-left: 2em;
+  font-family: inherit;
 }
 /*block*/
 .block{
@@ -110,20 +116,44 @@ aside{
   height: 90px;
   background-color: white;
 }
+.block.form select,input{
+  margin: 5px;
+}
 .block.form form{
   height: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-content: center;
+  flex-wrap: row wrap;
 }
 .block.form form>div{
   display: flex;
+  margin: auto;
   padding: 10px;
   flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+.block.form form>div:nth-child(2){
+  width: 200px;
+}
+.block.form #buyer, #saler{
+  width: 70%;
 }
 .block.form label{
   color: grey;
+  margin: auto;
+}
+#bigbox{
+  width: 300px;
+}
+#bigbox .widthbig{
+  width: 50%;
+}
+input[type="submit"]{
+  background-color: #2189bf;
+  padding: .5em 1.5em;
+  color: white;
+  border: none;
+  border-radius: 2px;
 }
 /*价格第二栏*/
 .block.price{
@@ -166,8 +196,53 @@ aside{
   background-repeat:no-repeat;
   background-position: 10px
 }
-.history>p{
+.history>a{
   height: 100%;
   line-height: 45px;
   padding-left: 30px;
+  color: black;
+}
+/*成交量 第三栏*/
+.volume{
+  display: flex;
+  justify-content: space-between;
+}
+.volume>div{
+  width: 200px;
+  height: 75px;
+  display: flex;
+  flex: row nowrap;
+  justify-content: space-between;
+  border-left: 3px solid;
+  border-radius: 2px;
+}
+.volume>div .colorblock{
+  width: 60px;
+  height: 50px;
+  margin: auto 0;
+/*  background-color: blue;*/
+}
+.volume>div:nth-child(1){
+  border-color: #41b09d;
+}
+.volume>div:nth-child(1) .colorblock{
+  background-color: #41b09d;
+}
+.volume>div:nth-child(2){
+  border-color: #3a8ac0 ;
+}
+.volume>div:nth-child(2) .colorblock{
+  background-color: #3a8ac0;
+}
+.volume>div:nth-child(3){
+  border-color: #cd4935;
+}
+.volume>div:nth-child(3) .colorblock{
+  background-color: #cd4935;
+}
+.volume>div:nth-child(4){
+  border-color: #e0cc49 ;
+}
+.volume>div:nth-child(4) .colorblock{
+  background-color: #e0cc49;
 }
