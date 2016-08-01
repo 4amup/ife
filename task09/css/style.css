@@ -69,27 +69,96 @@ a{
 /*aside*/
 aside{
   width: 260px;
-  height: 150%;
+  height: 120%;
   background-color: #2a2d3c;
   /*使用绝对定位，并使aside显示于最底层*/
   position: absolute;
-  top: 0;
+  top: 56px;
   left: 0;
-  z-index: -1;
-  padding-top: 60px;
+  padding: 2em 0;
+  color: #707f94;
 }
 /*profile*/
 .profile>div{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
 }
 .profile .avatar{
   width: 60px;
   height: 60px;
+  margin: auto 1em;
   background-image: url(../img/back.png),url(../img/back2.png);
   background-position: center,center;
   background-repeat: no-repeat, no-repeat;
+}
+.profile .username{
+  color: white;
+  margin: auto 1em;
+}
+.profile span{
+  padding: .5em 1.5em;
+}
+.profile span:nth-child(1){
+  border-right: 1px #707f94 solid;
+}
+/*filelist*/
+.filelist ul{
+  padding: 0;
+}
+.filelist li{
+  padding-left: 2em;
+}
+.filelist>ul>li{
+  padding-left: 4em;
+}
+.filelist li a{
+  padding: 1em 2em;
+}
+.filelist li a:hover{
+  color: white;
+}
+.filelist>ul>li:hover{
+  background-color: #383d4d;
+}
+/*首层文件*/
+.filelist>ul>li>a{
+  background-position:left center;
+  background-repeat: no-repeat;
+}
+.filelist>ul>li:nth-child(1)>a{
+  background-image: url(../img/icon5.png);
+}
+.filelist>ul>li:nth-child(2)>a,.filelist>ul>li:nth-child(4)>a,.filelist>ul>li:nth-child(5)>a{
+  background-image: url(../img/icon2.png);
+}
+.filelist>ul>li:nth-child(3)>a{
+  background-image: url(../img/icon4.png);
+}
+.filelist>ul>li:nth-child(6)>a{
+  background-image: url(../img/icon3.png);
+}
+/*二层文件*/
+.filelist>ul>li>ul>li>a{
+  background-image: url(../img/icon6.png);
+  background-position:left center;
+  background-repeat: no-repeat;
+}
+.filelist>ul>li>ul>li>a:hover{
+  background-image: url(../img/icon8.png);
+  background-position:left center;
+  background-repeat: no-repeat;
+}
+/*三层文件*/
+.filelist>ul>li>ul>li>ul>li>a{
+  background-image: url(../img/icon1.png);
+  background-position:left center;
+  background-repeat: no-repeat;
+}
+.filelist>ul>li>ul>li>ul>li>a:hover{
+  background-image: url(../img/icon7.png);
+  background-position:left center;
+  background-repeat: no-repeat;
 }
 /*container*/
 #container{
