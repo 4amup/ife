@@ -78,6 +78,19 @@ aside{
   z-index: -1;
   padding-top: 60px;
 }
+/*profile*/
+.profile>div{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.profile .avatar{
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/back.png),url(../img/back2.png);
+  background-position: center,center;
+  background-repeat: no-repeat, no-repeat;
+}
 /*container*/
 #container{
   margin-left: 260px;
