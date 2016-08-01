@@ -1,5 +1,5 @@
 /* reset */
-body, header, footer, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td{
+body, header, footer, div, h1, h2, h3, h4, h5, h6, pre, form, figure, fieldset, input, textarea, p, blockquote, th, td{
   padding:0px;
   margin:0px;
   box-sizing: border-box;
@@ -69,13 +69,14 @@ a{
 /*aside*/
 aside{
   width: 260px;
-  height: 500%;
+  height: 150%;
   background-color: #2a2d3c;
   /*使用绝对定位，并使aside显示于最底层*/
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  padding-top: 60px;
 }
 /*container*/
 #container{
