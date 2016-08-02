@@ -69,7 +69,7 @@ a{
 /*aside*/
 aside{
   width: 260px;
-  height: 120%;
+  height: 150%;
   background-color: #2a2d3c;
   /*使用绝对定位，并使aside显示于最底层*/
   position: absolute;
@@ -371,11 +371,103 @@ input[type="submit"]{
 .content .datacontainer:nth-child(1),.content .datacontainer:nth-child(4){
   width: 60%;
 }
-/*brandlist 汽车品牌排行榜*/
-.content .brandlist .table{
-  overflow: auto;
+/*1、tablecontainer项目表格和内容*/
+.tablecontainer .tablebox{
+  margin: auto;
+  margin-top: 1em;
+  width: 90%;
   height: 80%;
-
+}
+.tablecontainer .tableborder{
+  border: 1px #ececec solid;
+  border-top: none;
+  border-radius: 5px;
+  padding: 2em;
+  height: 90%;
+}
+.tablecontainer .tabletags{
+  display: flex;
+  border-bottom: 1px #ececec solid;
+}
+/*边框的实现还有点小bug不能在hover时完全隐藏tag的下边*/
+.tablecontainer .tabletags span{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-right: .5em;
+  padding: .5em 2em;
+  background-color: #ececec;
+}
+.tablecontainer .tabletags span:hover{
+  background-color: white;
+  border: 1px #ececec solid;
+  /*border-bottom: none;*/
+  border-bottom: 1px white solid;
+}
+.tablecontainer table{
+  border: 1px black solid;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 2em;
+}
+.tablecontainer table td:hover{
+  background-color: #ececec;
+}
+/*2、itemwriter 项目写作表*/
+.itemwriter form{
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+.itemwriter label{
+  display: block;
+  color: grey;
+  font-family: Microsoft Yahei;
+  margin: .3em 1em;
+}
+.itemwriter table{
+  border: none;
+  border-collapse: collapse;
+}
+.itemwriter table td{
+  padding: 0;
+}
+.itemwriter table td:nth-child(1){
+  border-left: none;
+}
+.itemwriter table td:nth-child(2){
+  border-right: none;
+}
+.content .itemwriter input{
+  border: none;
+  text-align: left;
+  margin: .2em;
+  padding: .5em;
+  width: 95%;
+}
+.content .itemwriter textarea{
+  border: none;
+  resize: none;
+  width: 98%;
+  padding: .2em 1em;
+}
+.itemwriter input[type="radio"]{
+  width: 1em;
+  margin: auto 0;
+}
+.itemwriter>form>div{
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+.itemwriter input[type="submit"]{
+  margin: auto 0;
+  width: 5em;
+}
+/*4、brandlist 汽车品牌排行榜*/
+.content .brandlist .tablecontainer{
+  overflow: auto;
+  height: 90%;
+  width: 80%;
 }
 .content .brandlist table{
   border-collapse: collapse;
@@ -383,12 +475,11 @@ input[type="submit"]{
   width: 450px;
 }
 table,th,td{
-  border: 2px #ececec solid;
-  /*box-shadow: 0 0 1px grey;*/
+  border: 1px #ececec solid;
 }
 th,td{
   padding: 5px 16px;
 }
-table>tbody>tr:hover{
+.brandlist table>tbody>tr:hover{
   background-color: #ececec;
 }
