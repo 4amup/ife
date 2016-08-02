@@ -187,6 +187,15 @@ aside{
   padding-left: 2em;
   font-family: inherit;
 }
+select{
+  border: 1px #ececec solid;
+  background-color: white;
+  /*清除默认的select样式*/
+  appearance:none;  
+  -moz-appearance:none;  
+  -webkit-appearance:none;
+  padding: .5em 1.5em;
+}
 /*block*/
 .block{
   width: 90%;
