@@ -189,12 +189,15 @@ aside{
 }
 select{
   border: 1px #ececec solid;
+  border-radius: 0;
   background-color: white;
   /*清除默认的select样式*/
   appearance:none;  
   -moz-appearance:none;  
   -webkit-appearance:none;
-  padding: .5em 1.5em;
+  padding: .3em 1.5em;
+  background: url(../img/downarrow.png) no-repeat right center;
+  background-position: 95%;
 }
 /*block*/
 .block{
@@ -209,18 +212,17 @@ select{
   text-align: center;
   box-shadow: 0 0 1px grey;
 }
-/*第一栏表单查询*/
+/*第一栏表单查询 form*/
 .form{
   height: 90px;
   background-color: white;
 }
-.block.form select,input{
-  margin: 5px;
+.form select,input{
+  margin: .2em;
 }
 .form form{
   height: 100%;
   display: flex;
-  flex-wrap: row wrap;
 }
 .form form>div{
   display: flex;
@@ -230,13 +232,24 @@ select{
   justify-content: space-between;
   align-content: center;
 }
-.block.form form>div:nth-child(2){
-  width: 200px;
+.form form>div:nth-child(2){
+  width: 220px;
 }
-.block.form #buyer, #saler{
-  width: 70%;
+.form #buyer, #saler{
+  width: 80%;
 }
-.block.form label{
+.form .changebuyer{
+  margin-left: 0;
+  text-align: right;
+  background: url(../img/change.png) no-repeat left center;
+  /*width: 5em;*/
+}
+.form .changebuyer a{
+  margin: auto;
+  margin-left: 3px;
+  color: white;
+}
+.form label{
   color: grey;
   margin: auto;
 }
@@ -432,10 +445,13 @@ input[type="submit"]{
   color: grey;
   font-family: Microsoft Yahei;
   margin: .3em 1em;
+  height: 2em;
+  line-height: 2em;
 }
 .itemwriter table{
   border: none;
   border-collapse: collapse;
+  width: 100%;
 }
 .itemwriter table td{
   padding: 0;
@@ -455,13 +471,16 @@ input[type="submit"]{
 }
 .content .itemwriter textarea{
   border: none;
+  border-bottom: 1px #ececec solid;
   resize: none;
   width: 98%;
-  padding: .2em 1em;
+  height: 8em;
+  padding: .5em 1em;
 }
 .itemwriter input[type="radio"]{
   width: 1em;
   margin: auto 0;
+
 }
 .itemwriter>form>div{
   display: flex;
@@ -469,13 +488,15 @@ input[type="submit"]{
   align-content: center;
 }
 .itemwriter input[type="submit"]{
-  margin: auto 0;
   width: 5em;
+  text-align: center;
+  margin-left: 35%; 
+  font-weight: bold;
 }
 /*4、brandlist 汽车品牌排行榜*/
 .content .brandlist .tablecontainer{
-  overflow: auto;
-  height: 90%;
+  overflow: hidden;
+  height: 80%;
   width: 80%;
 }
 .content .brandlist table{
