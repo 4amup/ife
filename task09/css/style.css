@@ -69,7 +69,7 @@ a{
 /*aside*/
 aside{
   width: 260px;
-  height: 120%;
+  height: 150%;
   background-color: #2a2d3c;
   /*使用绝对定位，并使aside显示于最底层*/
   position: absolute;
@@ -371,7 +371,7 @@ input[type="submit"]{
 .content .datacontainer:nth-child(1),.content .datacontainer:nth-child(4){
   width: 60%;
 }
-/*tablecontainer项目表格和内容*/
+/*1、tablecontainer项目表格和内容*/
 .tablecontainer .tablebox{
   margin: auto;
   margin-top: 1em;
@@ -412,7 +412,58 @@ input[type="submit"]{
 .tablecontainer table td:hover{
   background-color: #ececec;
 }
-/*brandlist 汽车品牌排行榜*/
+/*2、itemwriter 项目写作表*/
+.itemwriter form{
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+.itemwriter label{
+  display: block;
+  color: grey;
+  font-family: Microsoft Yahei;
+  margin: .3em 1em;
+}
+.itemwriter table{
+  border: none;
+  border-collapse: collapse;
+}
+.itemwriter table td{
+  padding: 0;
+}
+.itemwriter table td:nth-child(1){
+  border-left: none;
+}
+.itemwriter table td:nth-child(2){
+  border-right: none;
+}
+.content .itemwriter input{
+  border: none;
+  text-align: left;
+  margin: .2em;
+  padding: .5em;
+  width: 95%;
+}
+.content .itemwriter textarea{
+  border: none;
+  resize: none;
+  width: 98%;
+  padding: .2em 1em;
+}
+.itemwriter input[type="radio"]{
+  width: 1em;
+  margin: auto 0;
+}
+.itemwriter>form>div{
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+.itemwriter input[type="submit"]{
+  margin: auto 0;
+  width: 5em;
+}
+/*4、brandlist 汽车品牌排行榜*/
 .content .brandlist .tablecontainer{
   overflow: auto;
   height: 90%;
