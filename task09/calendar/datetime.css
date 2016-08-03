@@ -1,0 +1,53 @@
+/*页面全局*/
+body, html{
+  font-size: 14px;
+  font-family: 黑体;
+}
+/*部件全局*/
+.container{
+  width: 500px;
+  height: 500px;
+  /*border: 1px red solid;*/
+  margin: auto;
+  padding: 10px;
+}
+.timebox, .weekbox, .daycontainer{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+/*timebox部件*/
+.timebox{
+  width: 100%;
+  padding: 10px auto;
+  border-bottom: 1px skyblue solid;
+}
+select, button {
+  margin: 10px;
+  font-family: inherit;
+  background-color: white;
+  border: 1px grey solid;
+}
+/*weekbox部件*/
+.weekbox{
+  border-bottom: 1px grey solid;
+}
+.weekbox span{
+  margin: 10px;
+}
+/*daycontainer部件*/
+.daycontainer{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.daybox{
+  width: 13%;
+  margin: 2px;
+}
+.daybox p{
+  text-align: center;
+  margin: .3em;
+}
+.daymark{
+  border: 1px orange solid;
+}
