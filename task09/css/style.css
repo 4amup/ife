@@ -171,10 +171,6 @@ aside{
   /*background-color: red;*/
   /*height: 100px;*/
 }
-#container p{
-  font-family: Microsotf Yahei;
-  margin: auto;
-}
 #container header{
   color: grey;
   width: 100%;
@@ -493,23 +489,140 @@ input[type="submit"]{
   margin-left: 35%; 
   font-weight: bold;
 }
+/*3、calendar 日历部件*/
+.calendarbox{
+  margin: 1em;
+}
+.timebox, .weekbox, .daycontainer{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+/*timebox部件*/
+.timebox{
+  width: 100%;
+  border-bottom: 1px skyblue solid;
+}
+select, button {
+  margin: .5em 0;
+  font-family: inherit;
+  background-color: white;
+  border: 1px grey solid;
+}
+/*weekbox部件*/
+.weekbox{
+  border-bottom: 1px grey solid;
+}
+.weekbox span{
+  margin: 10px;
+  width: 14%;
+}
+/*daycontainer部件*/
+.daycontainer{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.daybox{
+  width: 13%;
+  margin: 2px;
+}
+.daybox p{
+  text-align: center;
+  margin: .25em;
+  font-family: inherit;
+}
+/*CSS3的属性，nth-child指定间隔7就红两个*/
+.daybox:nth-child(7n) p:first-child, .daybox:nth-child(7n-1) p:first-child{
+  color: red;
+}
+.daybox .holiday{
+  color: red;
+}
+.daymark{
+  border: 1px orange solid;
+}
 /*4、brandlist 汽车品牌排行榜*/
 .content .brandlist .tablecontainer{
   overflow: hidden;
   height: 80%;
-  width: 80%;
+  width: 90%;
+  margin: auto;
 }
 .content .brandlist table{
   border-collapse: collapse;
   margin: 1em auto;
-  width: 450px;
+  width: 100%;
+}
+.brandlist .bigcol{
+  width: 60%;
+}
+.brandlist .middlecol{
+  width: 25%;
 }
 table,th,td{
   border: 1px #ececec solid;
 }
 th,td{
-  padding: 5px 16px;
+  padding: .5em 1em;
+  margin: .5em;
+  white-space: nowrap;
 }
 .brandlist table>tbody>tr:hover{
   background-color: #ececec;
+}
+.brandlist .hotbox{
+  width: 70%;
+  margin: .4em;
+  background-color: #cdcdcd;
+  height: .35em;
+  float: right;
+  border-radius: 1px;
+}
+.brandlist .hot{
+  height: 100%;
+}
+/*nth-child()要在同一个父元素下才可以使用*/
+.brandlist table tr:nth-child(1) .hot{
+  background-color: #ea6d52;
+  width: 90%;
+}
+.brandlist table tr:nth-child(2) .hot{
+  background-color: #ee8050;
+  width: 85%;
+}
+.brandlist table tr:nth-child(3) .hot{
+  background-color: #ee8050;
+  width: 81%;
+}
+.brandlist table tr:nth-child(4) .hot{
+  background-color: #a0d6f4;
+  width: 75%;
+}
+.brandlist table tr:nth-child(5) .hot{
+  background-color: #a0d6f4;
+  width: 72%;
+}
+.brandlist table tr:nth-child(6) .hot{
+  background-color: #a0d6f4;
+  width: 70%;
+}
+.brandlist table tr:nth-child(7) .hot{
+  background-color: #a0d6f4;
+  width: 68%;
+}
+.brandlist table tr:nth-child(8) .hot{
+  background-color: #a0d6f4;
+  width: 63%;
+}
+.brandlist table tr:nth-child(9) .hot{
+  background-color: #a0d6f4;
+  width: 50%;
+}
+.brandlist table tr:nth-child(10) .hot{
+  background-color: #a0d6f4;
+  width: 41%;
+}
+.brandlist table tr:nth-child(11) .hot{
+  background-color: #a0d6f4;
+  width: 35%;
 }
