@@ -524,11 +524,11 @@ select, button {
 }
 .daybox{
   width: 13%;
-  margin: 2px;
+  margin: .1em;
 }
 .daybox p{
   text-align: center;
-  margin: .25em;
+  margin: .1em;
   font-family: inherit;
 }
 /*CSS3的属性，nth-child指定间隔7就红两个*/
