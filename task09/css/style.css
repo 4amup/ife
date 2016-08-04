@@ -580,6 +580,7 @@ th,td{
 }
 .brandlist .hot{
   height: 100%;
+  border-radius: 1px;
 }
 /*nth-child()要在同一个父元素下才可以使用*/
 .brandlist table tr:nth-child(1) .hot{
