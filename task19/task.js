@@ -4,6 +4,7 @@ var pushLeft = document.getElementById('pushLeft');
     pullRight = document.getElementById('pullRight');
     ul = document.createElement('ul');
     input = document.getElementsByTagName('input')[0];
+    count = ul.childNodes.length;
 //代理button的点击事件
 function funcDelegation(event) {
     switch(event.target)
