@@ -9,21 +9,21 @@ function funcDelegation(event) {
     switch(event.target)
   {
     case pushLeft:
-      if (input.value) {
+      if (input.value<=100 && input.value>=10) {
         var item = document.createElement('li');
         item.textContent = input.value;
         return ul.insertBefore(item,ul.firstChild);
       }else{
-        alert("请输入1-100数字！");
+        alert("请输入10-100数字！");
       }
       break;
     case pushRight:
-      if (input.value) {
+      if (input.value<=100 && input.value>=10) {
         var item = document.createElement('li');
         item.textContent = input.value;
         return ul.appendChild(item);
       } else {
-        alert("请输入1-100数字！");
+        alert("请输入10-100数字！");
       }
       break;
     case pullLeft:
