@@ -3,9 +3,16 @@
 <head>
 	<title>task19</title>
   <style type="text/css">
-    ul,li{
-      margin: 0;
-      padding: 0;
+    .container{
+      width: 30%;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+    }
+    ul{
+      width: 45%;
+      display: block;
+      margin: auto;
     }
     li{
       display: inline-block;
@@ -18,14 +25,19 @@
       color: white;
       background-color: red;
     }
+    input{
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-	<input type="number" min="10" max="100">
-	<button id="pushLeft">左侧入</button>
-	<button id="pushRight">右侧入</button>
-	<button id="pullLeft">左侧出</button>
-	<button id="pullRight">右侧出</button>
+  <div class="container">
+    <input type="number" min="10" max="100">
+    <button id="pushLeft">左侧入</button>
+    <button id="pushRight">右侧入</button>
+    <button id="pullLeft">左侧出</button>
+    <button id="pullRight">右侧出</button>
+  </div>
   <script type="text/javascript" src="task.js"></script>
 </body>
 </html>
