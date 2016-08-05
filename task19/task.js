@@ -32,6 +32,7 @@ function funcDelegation(event) {
       }
       if (input.value<=100 && input.value>=10) {
         var item = document.createElement('div');
+        var height = input.value;
         item.setAttribute("class","hot");
         item.setAttribute("style","height:"+height+'%;');
         item.textContent = input.value;
