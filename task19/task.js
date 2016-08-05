@@ -5,7 +5,11 @@ var pushLeft = document.getElementById('pushLeft');
     databox = document.createElement('div');
     databox.setAttribute("class","databox");
     input = document.getElementsByTagName('input')[0];
-//代理button的点击事件
+// 排序的函数
+function sortlist(argument) {
+  // body...
+}
+// 代理button的点击事件
 function funcDelegation(event) {
   switch(event.target)
   {
@@ -32,6 +36,7 @@ function funcDelegation(event) {
       }
       if (input.value<=100 && input.value>=10) {
         var item = document.createElement('div');
+        var height = input.value;
         item.setAttribute("class","hot");
         item.setAttribute("style","height:"+height+'%;');
         item.textContent = input.value;
@@ -66,5 +71,7 @@ function numberDelegation(event) {
 function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
+  // document.getElementById("sort").onclick
+  // onclick和click()方法要搞明白
 }
 init();
