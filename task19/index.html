@@ -4,29 +4,40 @@
 	<title>task19</title>
   <style type="text/css">
     .container{
-      width: 30%;
+      /*width: 30%;*/
       margin: auto;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
     }
-    ul{
-      width: 45%;
-      display: block;
+    .databox{
+      width: 1300px;
+      height: 300px;
+      display: flex;
       margin: auto;
+      padding: 0;
+      border: 1px red solid;
+      justify-content: center;
+      align-items: flex-end;
     }
-    li{
-      display: inline-block;
-      float: left;
-      margin: 5px;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
+    .databox>div{
+      margin: 1px;
+      width: 1.5%;
+      font-size: 12px;
       text-align: center;
       color: white;
       background-color: red;
     }
+    button,input{
+      margin: 1em;
+      padding: .5em 1em;
+      border: none;
+      border-radius: 3px;
+      background-color: skyblue;
+      box-shadow: 0 0 1px grey;
+    }
     input{
       text-align: center;
+      background-color: white;
     }
   </style>
 </head>
@@ -38,6 +49,7 @@
     <button id="pullLeft">左侧出</button>
     <button id="pullRight">右侧出</button>
   </div>
+  <div style="height:50;"></div>
   <script type="text/javascript" src="task.js"></script>
 </body>
 </html>
