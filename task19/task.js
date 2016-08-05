@@ -4,12 +4,15 @@ var pushLeft = document.getElementById('pushLeft');
     pullRight = document.getElementById('pullRight');
     ul = document.createElement('ul');
     input = document.getElementsByTagName('input')[0];
-    count = ul.childNodes.length;
 //代理button的点击事件
 function funcDelegation(event) {
-    switch(event.target)
+  switch(event.target)
   {
     case pushLeft:
+      if (ul.childNodes.length>=60) {
+        alert('队列元素数量最多限制为60个!');
+        return false;
+      }
       if (input.value<=100 && input.value>=10) {
         var item = document.createElement('li');
         item.textContent = input.value;
@@ -19,6 +22,10 @@ function funcDelegation(event) {
       }
       break;
     case pushRight:
+      if (ul.childNodes.length>=60) {
+        alert('队列元素数量最多限制为60个!');
+        return false;
+      }
       if (input.value<=100 && input.value>=10) {
         var item = document.createElement('li');
         item.textContent = input.value;
