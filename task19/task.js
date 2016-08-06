@@ -15,7 +15,7 @@ function random50() {
       databox.removeChild(databox.childNodes[i]);
     }
   }
-  for (var i = 0; i <=50; i++) {
+  for (var i = 0; i <50; i++) {
     var item = document.createElement('div');
     // 直接生成了10-100的随机数
     var height = parseInt(10 + (90 - 10) * (Math.random()));
@@ -33,11 +33,14 @@ function sortlist() {
   while(count){
     for (var i = 0; i < count-1; i++) {
       if (list[i].textContent > list[i+1].textContent){
+        // 做个闭包尝试
         databox.insertBefore(list[i+1],list[i]);
       }
     }
     count--;
   }
+  // 显示当前参加排序的元素数目
+  // alert(databox.childNodes.length);
 }
 // 代理button的点击事件
 // 本函数重复较多，后续熟练以后要回头看，能否提高性能，重构
