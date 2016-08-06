@@ -28,13 +28,12 @@ function random50() {
 }
 // 排序的函数
 function sortlist() {
-  var parent = document.getElementsByClassName('databox')[0];
   var list = document.getElementsByClassName('hot');
   var count = list.length;
   while(count){
     for (var i = 0; i < count-1; i++) {
       if (list[i].textContent > list[i+1].textContent){
-        parent.insertBefore(list[i+1],list[i]);
+        databox.insertBefore(list[i+1],list[i]);
       }
     }
     count--;
