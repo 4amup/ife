@@ -2,19 +2,38 @@ var pushLeft = document.getElementById('pushLeft');
     pushRight = document.getElementById('pushRight');
     pullLeft = document.getElementById('pullLeft');
     pullRight = document.getElementById('pullRight');
-    databox = document.createElement('div');
-    databox.setAttribute("class","databox");
     input = document.getElementsByTagName('input')[0];
+// 生成容器元素
+var databox = document.createElement('div');
+databox.setAttribute("class","databox");
+// 随机生成50个热度条
+function random50() {
+  // 删除databox的现有子节点
+  // 这里要特别注意，由于DOM树是动态更新的，所以倒着删除才能删干净
+  if (databox.childNodes.length>0) {
+    for (var i = databox.childNodes.length-1; i >0; i--) {
+      databox.removeChild(databox.childNodes[i]);
+    }
+  }
+  for (var i = 0; i <=50; i++) {
+    var item = document.createElement('div');
+    // 直接生成了10-100的随机数
+    var height = parseInt(10 + (90 - 10) * (Math.random()));
+    item.setAttribute("class","hot");
+    item.setAttribute("style","height:"+height+'%;');
+    item.textContent = height;
+    databox.insertBefore(item,databox.firstChild);
+  }
+  document.body.appendChild(databox);
+}
 // 排序的函数
 function sortlist() {
-  // alert('test onclick 绑定');
   var parent = document.getElementsByClassName('databox')[0];
   var list = document.getElementsByClassName('hot');
-  // alert(list[0].textContent);
   var count = list.length;
   while(count){
     for (var i = 0; i < count-1; i++) {
-      if (list[i].innerHTML > list[i+1].innerHTML){
+      if (list[i].textContent > list[i+1].textContent){
         parent.insertBefore(list[i+1],list[i]);
       }
     }
@@ -22,6 +41,7 @@ function sortlist() {
   }
 }
 // 代理button的点击事件
+// 本函数重复较多，后续熟练以后要回头看，能否提高性能，重构
 function funcDelegation(event) {
   switch(event.target)
   {
@@ -36,7 +56,8 @@ function funcDelegation(event) {
         item.setAttribute("class","hot");
         item.setAttribute("style","height:"+height+'%;');
         item.textContent = input.value;
-        return databox.insertBefore(item,databox.firstChild);
+        databox.insertBefore(item,databox.firstChild);
+        document.body.appendChild(databox);
       }else{
         alert("请输入10-100数字！");
       }
@@ -52,7 +73,8 @@ function funcDelegation(event) {
         item.setAttribute("class","hot");
         item.setAttribute("style","height:"+height+'%;');
         item.textContent = input.value;
-        return databox.appendChild(item);
+        databox.appendChild(item);
+        document.body.appendChild(databox);
       } else {
         alert("请输入10-100数字！");
       }
@@ -72,7 +94,6 @@ function funcDelegation(event) {
       }
       break;
   }
-  document.body.appendChild(databox);
 }
 //代理标签的删除事件
 function numberDelegation(event) {
@@ -84,6 +105,7 @@ function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
   document.getElementById("sort").onclick = sortlist;
+  document.getElementById("random").onclick = random50;
   // onclick和click()方法要搞明白
 }
 init();
