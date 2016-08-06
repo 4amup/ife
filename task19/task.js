@@ -6,8 +6,20 @@ var pushLeft = document.getElementById('pushLeft');
     databox.setAttribute("class","databox");
     input = document.getElementsByTagName('input')[0];
 // 排序的函数
-function sortlist(argument) {
-  // body...
+function sortlist() {
+  // alert('test onclick 绑定');
+  var parent = document.getElementsByClassName('databox')[0];
+  var list = document.getElementsByClassName('hot');
+  // alert(list[0].textContent);
+  var count = list.length;
+  while(count){
+    for (var i = 0; i < count-1; i++) {
+      if (list[i].innerHTML > list[i+1].innerHTML){
+        parent.insertBefore(list[i+1],list[i]);
+      }
+    }
+    count--;
+  }
 }
 // 代理button的点击事件
 function funcDelegation(event) {
@@ -71,7 +83,7 @@ function numberDelegation(event) {
 function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
-  // document.getElementById("sort").onclick
+  document.getElementById("sort").onclick = sortlist;
   // onclick和click()方法要搞明白
 }
 init();
