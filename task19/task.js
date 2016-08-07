@@ -9,12 +9,6 @@ databox.setAttribute("class","databox");
 // 随机生成50个热度条函数
 function random50() {
   // 删除databox的现有子节点
-  // 这里要特别注意，由于DOM树是动态更新的，所以倒着删除才能删干净
-  // if (databox.childNodes.length>0) {
-  //   for (var i = databox.childNodes.length-1; i >0; i--) {
-  //     databox.removeChild(databox.childNodes[i]);
-  //   }
-  // }
   resetAll();
   for (var i = 0; i <20; i++) {
     var item = document.createElement('div');
