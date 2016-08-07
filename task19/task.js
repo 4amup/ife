@@ -49,7 +49,7 @@ function sortlist() {
     count--;
   }
   // 显示当前参加排序的元素数目
-  alert(databox.childNodes.length);
+  // alert(databox.childNodes.length);
 }
 // 代理button的点击事件
 // 本函数重复较多，后续熟练以后要回头看，能否提高性能，重构
