@@ -36,7 +36,6 @@ function sortlist() {
   while(count){
     for (var i = 0; i < count-1; i++) {
       if (list[i].textContent > list[i+1].textContent){
-        // 做个闭包尝试
         databox.insertBefore(list[i+1],list[i]);
       }
     }
