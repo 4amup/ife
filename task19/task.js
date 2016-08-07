@@ -6,16 +6,11 @@ var pushLeft = document.getElementById('pushLeft');
 // 生成容器元素
 var databox = document.createElement('div');
 databox.setAttribute("class","databox");
-// 随机生成50个热度条
+// 随机生成50个热度条函数
 function random50() {
   // 删除databox的现有子节点
-  // 这里要特别注意，由于DOM树是动态更新的，所以倒着删除才能删干净
-  if (databox.childNodes.length>0) {
-    for (var i = databox.childNodes.length-1; i >0; i--) {
-      databox.removeChild(databox.childNodes[i]);
-    }
-  }
-  for (var i = 0; i <50; i++) {
+  resetAll();
+  for (var i = 0; i <20; i++) {
     var item = document.createElement('div');
     // 直接生成了10-100的随机数
     var height = parseInt(10 + (90 - 10) * (Math.random()));
@@ -26,6 +21,14 @@ function random50() {
   }
   document.body.appendChild(databox);
 }
+// reset所有节点的函数，即全部删除节点
+function resetAll() {
+  if (databox.childNodes.length) {
+    for (var i = databox.childNodes.length-1; i>=0; i--){
+      databox.removeChild(databox.childNodes[i]);
+    }
+  }
+}
 // 排序的函数
 function sortlist() {
   var list = document.getElementsByClassName('hot');
@@ -33,7 +36,6 @@ function sortlist() {
   while(count){
     for (var i = 0; i < count-1; i++) {
       if (list[i].textContent > list[i+1].textContent){
-        // 做个闭包尝试
         databox.insertBefore(list[i+1],list[i]);
       }
     }
@@ -108,6 +110,6 @@ function init() {
   document.body.addEventListener('click',numberDelegation,false);
   document.getElementById("sort").onclick = sortlist;
   document.getElementById("random").onclick = random50;
-  // onclick和click()方法要搞明白
+  document.getElementById("reset").onclick = resetAll;
 }
 init();
