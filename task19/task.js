@@ -6,8 +6,8 @@ var pushLeft = document.getElementById('pushLeft');
 // 生成容器元素
 var databox = document.createElement('div');
 databox.setAttribute("class","databox");
-// 随机生成50个热度条函数
-function random50() {
+// 随机生成20个热度条函数
+function random20() {
   // 删除databox的现有子节点
   resetAll();
   for (var i = 0; i <20; i++) {
@@ -109,7 +109,7 @@ function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
   document.getElementById("sort").onclick = sortlist;
-  document.getElementById("random").onclick = random50;
+  document.getElementById("random").onclick = random20;
   document.getElementById("reset").onclick = resetAll;
 }
 init();
