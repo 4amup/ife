@@ -1,48 +1,61 @@
-var pushLeft = document.getElementById('pushLeft');
-    pushRight = document.getElementById('pushRight');
-    pullLeft = document.getElementById('pullLeft');
-    pullRight = document.getElementById('pullRight');
-    input = document.getElementsByTagName('input')[0];
+var pushLeft = document.getElementById('pushLeft'),
+    pushRight = document.getElementById('pushRight'),
+    pullLeft = document.getElementById('pullLeft'),
+    pullRight = document.getElementById('pullRight'),
+    input = document.getElementsByTagName('input')[0],
+    array = [];
 // 生成容器元素
 var databox = document.createElement('div');
 databox.setAttribute("class","databox");
+// 渲染函数
+function render(array) {
+  if (array.length) {
+    for (var i = 0; i < array.length; i++) {
+      var item = document.createElement('div');
+      var height = array[i];
+      item.setAttribute("class","hot");
+      item.setAttribute("style","height:"+height+'%;');
+      item.textContent = height;
+      databox.insertBefore(item,databox.firstChild);
+    }
+    document.body.appendChild(databox);
+  } else {
+    return false;
+  }
+}
 // 随机生成20个热度条函数
 function random20() {
   // 删除databox的现有子节点
-  resetAll();
+  var a = array;
+  reset(a);
   for (var i = 0; i <20; i++) {
-    var item = document.createElement('div');
-    // 直接生成了10-100的随机数
-    var height = parseInt(10 + (90 - 10) * (Math.random()));
-    item.setAttribute("class","hot");
-    item.setAttribute("style","height:"+height+'%;');
-    item.textContent = height;
-    databox.insertBefore(item,databox.firstChild);
+    // 生成10-100的随机数
+    var num = parseInt(10 + (90 - 10) * (Math.random()));
+    a.push(num);
   }
-  document.body.appendChild(databox);
+  render(a);
 }
 // reset所有节点的函数，即全部删除节点
-function resetAll() {
-  if (databox.childNodes.length) {
-    for (var i = databox.childNodes.length-1; i>=0; i--){
-      databox.removeChild(databox.childNodes[i]);
-    }
-  }
+function reset() {
+  array = [];
+  render(array);
+  return array = [];
 }
 // 排序的函数
 function sortlist() {
-  var list = document.getElementsByClassName('hot');
-  var count = list.length;
+  var count = array.length;
+  var temp;
   while(count){
     for (var i = 0; i < count-1; i++) {
-      if (list[i].textContent > list[i+1].textContent){
-        databox.insertBefore(list[i+1],list[i]);
+      if (arr[i] > arr[i+1]){
+        temp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
       }
     }
     count--;
-  }
-  // 显示当前参加排序的元素数目
-  // alert(databox.childNodes.length);
+  };
+  render(arr);
 }
 // 代理button的点击事件
 // 本函数重复较多，后续熟练以后要回头看，能否提高性能，重构
@@ -50,49 +63,41 @@ function funcDelegation(event) {
   switch(event.target)
   {
     case pushLeft:
-      if (databox.childNodes.length>=60) {
-        alert('队列元素数量最多限制为60个!');
-        return false;
-      }
+      // if (arr.length>=60) {
+      //   alert('队列元素数量最多限制为60个!');
+      //   return false;
+      // }
       if (input.value<=100 && input.value>=10) {
-        var item = document.createElement('div');
-        var height = input.value;
-        item.setAttribute("class","hot");
-        item.setAttribute("style","height:"+height+'%;');
-        item.textContent = input.value;
-        databox.insertBefore(item,databox.firstChild);
-        document.body.appendChild(databox);
+        array.unshift(input.value);
+        render(array);
       }else{
         alert("请输入10-100数字！");
       }
       break;
     case pushRight:
-      if (databox.childNodes.length>=60) {
+      if (array.length>=60) {
         alert('队列元素数量最多限制为60个!');
         return false;
       }
       if (input.value<=100 && input.value>=10) {
-        var item = document.createElement('div');
-        var height = input.value;
-        item.setAttribute("class","hot");
-        item.setAttribute("style","height:"+height+'%;');
-        item.textContent = input.value;
-        databox.appendChild(item);
-        document.body.appendChild(databox);
+        array.push(input.value);
+        render(array);
       } else {
         alert("请输入10-100数字！");
       }
       break;
     case pullLeft:
-      if (databox.childNodes.length) {
-        alert(databox.removeChild(databox.firstChild).textContent);
+      if (array.length) {
+        alert(array.shift());
+        render(array);
       } else {
         alert("当前列表为空，请输入数字后再执行删除操作！");
       }
       break;
     case pullRight:
-      if (databox.childNodes.length) {
-        alert(databox.removeChild(databox.lastChild).textContent);
+      if (array.length) {
+        alert(array.pop());
+        render(array);
       } else {
         alert("当前列表为空，请输入数字后再执行删除操作！");
       }
@@ -104,12 +109,19 @@ function numberDelegation(event) {
   if (event.target.className == "hot") {
     event.target.parentNode.removeChild(event.target);
   }
+  // 需要
+  var temp_arr = [];
+  for (var i = 0; i < databox.length; i++) {
+    temp_arr.push(parseInt(databox[i].textContent));
+  }
+  // 更新数组
+  array = temp_arr;
 }
 function init() {
   document.body.addEventListener('click',funcDelegation,false);
   document.body.addEventListener('click',numberDelegation,false);
   document.getElementById("sort").onclick = sortlist;
   document.getElementById("random").onclick = random20;
-  document.getElementById("reset").onclick = resetAll;
+  document.getElementById("reset").onclick = reset();
 }
 init();
