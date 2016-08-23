@@ -1,129 +1,85 @@
-var pushLeft = document.getElementById('pushLeft');
-var pushRight = document.getElementById('pushRight');
-var pullLeft = document.getElementById('pullLeft');
-var pullRight = document.getElementById('pullRight');
-var input = document.getElementsByTagName('input')[0];
-// 生成容器元素
-var databox = document.createElement('div');
-databox.setAttribute("class","databox");
-// 初始化数组
-var data = new Array();
-// 渲染函数
-function render(data) {
-  if (data.length) {
-    for (var i = 0; i < data.length; i++) {
-      var item = document.createElement('div');
-      var height = data[i];
-      item.setAttribute("class","hot");
-      item.setAttribute("style","height:"+height+'%;');
-      item.textContent = height;
-      databox.insertBefore(item,databox.firstChild);
-    }
-    document.body.appendChild(databox);
-  } else {
-    return false;
+var data=[];//定义存放数据的数组
+var str="";//定义更新UL的字符串
+var container=document.getElementById("list");
+//数据更新函数
+function updata(){
+  container.innerHTML="";
+  for(i=0;i<=data.length-1;i++){
+    var lielement=document.createElement("li");
+    lielement.innerText=data[i];
+    lielement.style.height=data[i]*2+'px';
+    lielement.style.backgroundColor= "red";
+    lielement.setAttribute("id","li-"+i);
+    container.appendChild(lielement);
   }
+  document.getElementById("inputbox").value="";
 }
-// 随机生成20个热度条函数
-function random20() {
-  // 删除databox的现有子节点
-  var a = data;
-  reset(a);
-  for (var i = 0; i <20; i++) {
-    // 生成10-100的随机数
-    var num = parseInt(10 + (90 - 10) * (Math.random()));
-    a.push(num);
-  }
-  render(a);
-  return array;
+//输入并处理数据的函数
+function inputnum(){
+  input=document.getElementById("inputbox").value.trim();
+  if(data.length>=60){alert("数据已满");return 0;}
+  if(input>=100||input<=10){alert("输入不合法");return 0;}
+  if(input==""){alert("输入不合法");return 0;}
+  if(isNaN(input)){alert("输入不合法");return 0;}
 }
-// reset所有节点的函数，即全部删除节点
-function reset() {
-  data = [];
-  render(data);
-  return data = [];
-}
-// 排序的函数
-function sortlist() {
-  var count = data.length;
-  var temp;
-  while(count){
-    for (var i = 0; i < count-1; i++) {
-      if (data[i] > data[i+1]){
-        temp = data[i];
-        data[i] = data[i+1];
-        data[i+1] = temp;
-      }
-    }
-    count--;
+//时间绑定与处理
+var lin=document.getElementById("leftin").onclick=function(){
+    //若输入不合法则跳出函数
+    if(inputnum()==0)return;
+    data.splice(0,0,input);
+    updata();
   };
-  render(data);
-}
-// 代理button的点击事件
-// 本函数重复较多，后续熟练以后要回头看，能否提高性能，重构
-function funcDelegation(event) {
-  switch(event.target)
-  {
-    case pushLeft:
-      // if (arr.length>=60) {
-      //   alert('队列元素数量最多限制为60个!');
-      //   return false;
-      // }
-      if (input.value<=100 && input.value>=10) {
-        data.unshift(input.value);
-        render(data);
-      }else{
-        alert("请输入10-100数字！");
-      }
-      break;
-    case pushRight:
-      if (data.length>=60) {
-        alert('队列元素数量最多限制为60个!');
-        return false;
-      }
-      if (input.value<=100 && input.value>=10) {
-        data.push(input.value);
-        render(data);
+var rin=document.getElementById("rightin").onclick=function(){
+    if(inputnum()==0)return;
+    data.push(input);
+    updata();
+  };
+var rout=document.getElementById("rightout").onclick=function(){
+    alert(data.pop());
+    updata();
+  };
+var lout=document.getElementById("leftout").onclick=function(){
+    alert(data.splice(0,1));
+    updata();
+  };
+//下面是点击删除的代码
+container.addEventListener("click",function(e) {
+  if(e.target.nodeName!="LI")return;//若点击的不是LI标签,则返回
+  liid = parseInt(e.target.getAttribute("id").substr(3));
+  console.log(liid);
+  data.splice(liid,1);
+  updata();
+});
+//随机生成数据
+document.getElementById("random").onclick=function(){
+  for(i=0;i<=50;i++){
+    data[i]=Math.floor(Math.random()*91+9);
+  }
+  updata();
+};
+//排序算法
+document.getElementById("sortdata").onclick=function(){
+  var i = 0,j = 1,temp;
+      len = data.length;
+      timer = null;
+  timer = setInterval(run,25);
+  function run() {
+    if (i < len) {
+      if (j < len) {
+        if (data[i] > data[j]) {
+          temp = data[i];
+          data[i] = data[j];
+          data[j] = temp;
+          updata();
+        }
+        j++;
       } else {
-        alert("请输入10-100数字！");
+        i++;
+        j = i + 1;
       }
-      break;
-    case pullLeft:
-      if (data.length) {
-        alert(data.shift());
-        render(data);
-      } else {
-        alert("当前列表为空，请输入数字后再执行删除操作！");
-      }
-      break;
-    case pullRight:
-      if (data.length) {
-        alert(data.pop());
-        render(data);
-      } else {
-        alert("当前列表为空，请输入数字后再执行删除操作！");
-      }
-      break;
+    } else {
+      clearInterval(timer);
+      return;
+    }
   }
 }
-//代理标签的删除事件
-function numberDelegation(event) {
-  if (event.target.className == "hot") {
-    event.target.parentNode.removeChild(event.target);
-  }
-  // 需要
-  var temp_arr = [];
-  for (var i = 0; i < databox.length; i++) {
-    temp_arr.push(parseInt(databox[i].textContent));
-  }
-  // 更新数组
-  data = temp_arr;
-}
-function init() {
-  document.body.addEventListener('click',funcDelegation,false);
-  document.body.addEventListener('click',numberDelegation,false);
-  document.getElementById("sort").onclick = sortlist;
-  document.getElementById("random").onclick = random20;
-  document.getElementById("reset").onclick = reset;
-}
-init();
