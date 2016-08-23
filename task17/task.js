@@ -21,7 +21,7 @@ function getDateStr(dat) {
 function randomBuildData(seed) {
   var returnData = {};
   var dat = new Date("2016-01-01");
-  var datStr = ''
+  var datStr = '';
   for (var i = 1; i < 92; i++) {
     datStr = getDateStr(dat);
     returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -84,7 +84,8 @@ function citySelectChange(value) {
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
 function initGraTimeForm() {
-
+  var formGraTieme = document.getElementById('form-gra-time');
+  
 }
 
 /**
