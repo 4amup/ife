@@ -62,19 +62,40 @@ function renderChart() {
  * 日、周、月的radio事件点击时的处理函数
  */
 function graTimeChange() {
+  // 调试代码
+  console.log('addEventListener is working');
   // 确定是否选项发生了变化 
+  var graTime = document.getElementsByName('gra-time');
+  for (var i = 0; i < graTime.length; i++) {
+    if(graTime[i].checked){
+      var value = graTime[i].value;
+      break;
+    }
+  }
 
   // 设置对应数据
-
+  switch(value){
+    case 'day':
+      console.log('is day');
+      break;
+    case 'week':
+      console.log('is week');
+      break;
+    case 'month':
+      console.log('is month');
+      break;
+  }
   // 调用图表渲染函数
 }
 
 /**
  * select发生变化时的处理函数
  */
-function citySelectChange(value) {
+function citySelectChange() {
+  // 调试代码
+  console.log('city is changed!')
   // 确定是否选项发生了变化 
-  console.log(value);
+
   // 设置对应数据
 
   // 调用图表渲染函数
@@ -84,8 +105,13 @@ function citySelectChange(value) {
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
 function initGraTimeForm() {
-  var formGraTieme = document.getElementById('form-gra-time');
-  
+  var formGraTime = document.getElementById('form-gra-time');
+  // 事件委托
+  formGraTime.addEventListener('click',function(event){
+    if (event.target && event.target.nodeName == "INPUT") {
+      graTimeChange();
+    }
+  });
 }
 
 /**
@@ -104,10 +130,8 @@ function initCitySelector() {
   }
   selectCity.innerHTML = options;
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
-  selectCity.setAttribute("onchange","citySelectChange(this.value)");
-  console.log(this.value);
+  selectCity.onchange = citySelectChange;
 }
-
 /**
  * 初始化图表需要的数据格式
  */
