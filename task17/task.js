@@ -95,7 +95,7 @@ function citySelectChange() {
   // 调试代码
   console.log('city is changed!')
   // 确定是否选项发生了变化 
-
+  var city = this.value;
   // 设置对应数据
 
   // 调用图表渲染函数
@@ -120,15 +120,16 @@ function initGraTimeForm() {
 function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
   var selectCity = document.getElementById("city-select");
-  var city = [];
+  var cityArr = [];
   for (var i in aqiSourceData) {
-  	city.push(i);
+  	cityArr.push(i);
   }
-  var options="";
+  var optionsHTML="";
   for (var i = 0; i < city.length; i++) {
-  	options += "<option>"+city[i]+"</option>";
+  	optionsHTML += "<option>"+cityArr[i]+"</option>";
   }
-  selectCity.innerHTML = options;
+  pageState.nowSelectCity = cityArr[0];
+  selectCity.innerHTML = optionsHTML;
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
   selectCity.onchange = citySelectChange;
 }
@@ -137,6 +138,23 @@ function initCitySelector() {
  */
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
+  var week = {},count = 0,singleWeek = {},
+      month = {},mcount = 0,singleMonth = {};
+
+  for(var key in aqiSourceData){
+    // for(var time in aqiSourceData[city]){
+    //   var week = {};
+    //   do{
+    //     var datetime = new Date(time);
+    //     var i = datetme.getDay();
+    //     datetime.setDate(datetime.getDate()+1);
+    //   }
+    //   while()
+      
+    //   for(i;i<7)
+    //   if (datetime.getDate) {}
+    // }
+  }
   // 处理好的数据存到 chartData 中
 }
 
