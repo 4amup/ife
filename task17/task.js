@@ -125,7 +125,7 @@ function initCitySelector() {
   	cityArr.push(i);
   }
   var optionsHTML="";
-  for (var i = 0; i < city.length; i++) {
+  for (var i = 0; i < cityArr.length; i++) {
   	optionsHTML += "<option>"+cityArr[i]+"</option>";
   }
   pageState.nowSelectCity = cityArr[0];
@@ -138,24 +138,36 @@ function initCitySelector() {
  */
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
-  var week = {},count = 0,singleWeek = {},
-      month = {},mcount = 0,singleMonth = {};
+  var week = {};
+  var month = {};
 
-  for(var key in aqiSourceData){
-    // for(var time in aqiSourceData[city]){
-    //   var week = {};
-    //   do{
-    //     var datetime = new Date(time);
-    //     var i = datetme.getDay();
-    //     datetime.setDate(datetime.getDate()+1);
-    //   }
-    //   while()
-      
-    //   for(i;i<7)
-    //   if (datetime.getDate) {}
-    // }
+  for(var city in aqiSourceData){
+    console.log(city);
+    week[city] = {};
+    month[city] = {};
+    var sum = 0;
+    var i = 1;
+    for(date in aqiSourceData[city]){
+      sum+=aqiSourceData[city][date];
+      i++;
+      x = new Date(date);
+      if (x.getDay() == 0 ) {
+        week[city]["第"+count+"周"]= sum/i;
+        console.log("第"+count+"周:"+sum/i);
+        sum = 0;
+        i = 0;
+        count++;
+      }
+    }
+    count = 1;
+    mcount = 1;
   }
-  // 处理好的数据存到 chartData 中
+  // 处理好的数据存到chartData中
+  // chartData[day] = aqiSourceData;
+  chartData.day = aqiSourceData;
+  chartData.week = week;
+  chartData.month = month;
+  console.log(chartData);
 }
 
 /**
