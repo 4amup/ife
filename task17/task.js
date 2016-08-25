@@ -138,32 +138,48 @@ function initCitySelector() {
  */
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
-  var week = {};
-  var month = {};
+  var week = {},count=1;
+  var month = {},mcount=0;
 
   for(var city in aqiSourceData){
     console.log(city);
     week[city] = {};
-    month[city] = {};
     var sum = 0;
-    var i = 1;
+    var weekCount = 0;
     for(date in aqiSourceData[city]){
       sum+=aqiSourceData[city][date];
-      i++;
-      x = new Date(date);
-      if (x.getDay() == 0 ) {
-        week[city]["第"+count+"周"]= sum/i;
-        console.log("第"+count+"周:"+sum/i);
+      weekCount++;
+      var x = new Date(date);
+      if (x.getDay() == 0 || date=="2016-03-31") {
+        week[city]["第"+count+"周"]= sum/weekCount;
+        console.log("第"+count+"周:"+sum/weekCount);
         sum = 0;
-        i = 0;
+        weekCount = 0;
         count++;
       }
     }
     count = 1;
-    mcount = 1;
+  }
+  for(var city in aqiSourceData){
+    console.log(city);
+    month[city] = {};
+    var sum = 0;
+    var monthCount = 0;
+    for(date in aqiSourceData[city]){
+      var x = new Date(date);
+      if (x.getMonth() <= monthCount && date!="2016-03-31") {
+        sum+=aqiSourceData[city][date];
+        mcount++;
+      }else{
+        month[city]["第"+(monthCount+1)+"月"]= sum/mcount;
+        console.log("第"+(monthCount+1)+"月:"+sum/mcount);
+        monthCount++;
+        sum = 0;
+        mcount = 0;
+      }
+    }
   }
   // 处理好的数据存到chartData中
-  // chartData[day] = aqiSourceData;
   chartData.day = aqiSourceData;
   chartData.week = week;
   chartData.month = month;
