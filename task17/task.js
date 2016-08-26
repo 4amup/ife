@@ -43,62 +43,105 @@ var aqiSourceData = {
 };
 
 // 用于渲染图表的数据
-var chartData = {};
+var chartData = {
+  /*数据格式演示
+  "day":{
+    "北京":{
+      "2016-01-01":50,
+      "2016-01-01":50,
+      "2016-01-01":50,
+      "2016-01-01":50,
+      ...
+    }
+    "上海":{
+      ...
+      ...
+    }
+    ...
+  }
+  "week":{
+    "北京":{
+      "第1周":50,
+      "第2周":50,
+      "第3周":50,
+      "第4周":50,
+      ...
+    }
+    "上海":{
+      ...
+      ...
+    }
+    ...
+  }
+  "month":{
+    "北京":{
+      "第1月":50,
+      "第2月":50,
+      "第3月":50,
+    }
+    "上海":{
+      ...
+      ...
+    }
+    ...
+  }
+  */
+};
 
-// 记录当前页面的表单选项
+// 记录当前页面的表单选项和随机数最大值
 var pageState = {
   nowSelectCity: -1,
-  nowGraTime: "day"
+  nowGraTime: "day",
+  nowMaxValue: -1
 }
 
 /**
  * 渲染图表
  */
-function renderChart() {
-
+function renderChart(object) {
+  var aqiChartWrap = document.getElementsByClassName("aqi-chart-wrap")[0];
+  // 将渲染区的高度设置为(aqi最大值+5px)
+  aqiChartWrap.style.height = pageState.nowMaxValue+5;
+  aqiChartWrap.innerHTML = "";
+  for(var key in object){
+    var div = document.createElement("div");
+    div.style.height = object[key];
+    div.setAttribute("class",pageState.nowGraTime+"-div");
+    div.title = "指数:"+object[key];
+    aqiChartWrap.appendChild(div);
+  }
 }
 
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
-function graTimeChange() {
-  // 调试代码
-  console.log('addEventListener is working');
-  // 确定是否选项发生了变化 
-  var graTime = document.getElementsByName('gra-time');
-  for (var i = 0; i < graTime.length; i++) {
-    if(graTime[i].checked){
-      var value = graTime[i].value;
-      break;
-    }
-  }
+function graTimeChange(a) {
+  var time = a.value;
 
-  // 设置对应数据
-  switch(value){
-    case 'day':
-      console.log('is day');
-      break;
-    case 'week':
-      console.log('is week');
-      break;
-    case 'month':
-      console.log('is month');
-      break;
+  if (time!=pageState.nowGraTime && a.checked) {
+    pageState.nowGraTime = time;
+    console.log('time is changed to '+pageState.nowGraTime);
   }
+  // 设置对应数据
+  var data = chartData[pageState.nowGraTime][pageState.nowSelectCity];
   // 调用图表渲染函数
+  renderChart(data);
 }
 
 /**
  * select发生变化时的处理函数
  */
 function citySelectChange() {
-  // 调试代码
-  console.log('city is changed!')
-  // 确定是否选项发生了变化 
+  // 确定是否选项发生了变化
   var city = this.value;
+  if (city != pageState.nowSelectCity) {
+    pageState.nowSelectCity = city;
+    console.log('city now change to '+pageState.nowSelectCity);
+  }
   // 设置对应数据
-
+  var data = chartData[pageState.nowGraTime][pageState.nowSelectCity];
   // 调用图表渲染函数
+  renderChart(data);
 }
 
 /**
@@ -106,10 +149,11 @@ function citySelectChange() {
  */
 function initGraTimeForm() {
   var formGraTime = document.getElementById('form-gra-time');
+  pageState.nowGraTime = "day";
   // 事件委托
   formGraTime.addEventListener('click',function(event){
     if (event.target && event.target.nodeName == "INPUT") {
-      graTimeChange();
+      graTimeChange(event.target);
     }
   });
 }
@@ -137,53 +181,67 @@ function initCitySelector() {
  * 初始化图表需要的数据格式
  */
 function initAqiChartData() {
+  // 寻找最大值任务**********
+  var maxValue = pageState.nowMaxValue;
+
   // 将原始的源数据处理成图表需要的数据格式
   var week = {},count=1;
-  var month = {},mcount=0;
+  var month = {},mcount=1;
 
   for(var city in aqiSourceData){
     console.log(city);
-    week[city] = {};
+    week[city] = {}; // 创建以city为key的week对象
+
     var sum = 0;
-    var weekCount = 0;
+    var weekdays = 0;
+    
     for(date in aqiSourceData[city]){
-      sum+=aqiSourceData[city][date];
-      weekCount++;
-      var x = new Date(date);
-      if (x.getDay() == 0 || date=="2016-03-31") {
-        week[city]["第"+count+"周"]= sum/weekCount;
-        console.log("第"+count+"周:"+sum/weekCount);
+      
+      if (aqiSourceData[city][date]>maxValue) {
+        maxValue = aqiSourceData[city][date];
+      }
+
+      sum+=aqiSourceData[city][date]; //累计求和
+      weekdays++; //同时计数计数周期内的天数
+    
+      var x = new Date(date); //得到当天的一个日期对象
+      if (x.getDay() == 0 || date == "2016-03-31") //要是碰到周日或者末尾了就停了计算
+      {
+        week[city]["第"+count+"周"] = Math.round(sum/weekdays);
+        console.log("第"+count+"周:"+Math.round(sum/weekdays));
+        // 算完之后一切归零
         sum = 0;
-        weekCount = 0;
+        weekdays = 0;
         count++;
       }
     }
-    count = 1;
+    count = 1; // 循环完一次城市后，week计数初始化
   }
+
   for(var city in aqiSourceData){
     console.log(city);
     month[city] = {};
     var sum = 0;
-    var monthCount = 0;
+    var monthdays = 0;
     for(date in aqiSourceData[city]){
+      sum+=aqiSourceData[city][date];
+      monthdays++;
       var x = new Date(date);
-      if (x.getMonth() <= monthCount && date!="2016-03-31") {
-        sum+=aqiSourceData[city][date];
-        mcount++;
-      }else{
-        month[city]["第"+(monthCount+1)+"月"]= sum/mcount;
-        console.log("第"+(monthCount+1)+"月:"+sum/mcount);
-        monthCount++;
+      if (x.getMonth() == mcount || date == "2016-03-31") {
+        month[city]["第"+mcount+""] = Math.round(sum/monthdays);
+        console.log("第"+mcount+"月:"+Math.round(sum/monthdays));
         sum = 0;
-        mcount = 0;
+        monthdays = 0;
+        mcount++;
       }
     }
+    mcount = 1;
   }
   // 处理好的数据存到chartData中
   chartData.day = aqiSourceData;
   chartData.week = week;
   chartData.month = month;
-  console.log(chartData);
+  pageState.nowMaxValue = maxValue;
 }
 
 /**
@@ -193,6 +251,7 @@ function init() {
   initGraTimeForm()
   initCitySelector();
   initAqiChartData();
+  renderChart(chartData[pageState.nowGraTime][pageState.nowSelectCity]);
 }
 
 init();
