@@ -107,7 +107,7 @@ function renderChart(object) {
     var div = document.createElement("div");
     div.style.height = object[key];
     div.setAttribute("class",pageState.nowGraTime+"-div");
-    div.title = "指数:"+object[key];
+    div.title = key+"指数为:"+object[key];
     aqiChartWrap.appendChild(div);
   }
 }
