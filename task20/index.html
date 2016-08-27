@@ -1,57 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>task19</title>
+	<title>task18</title>
   <style type="text/css">
-    .container{
-      margin: auto;
-      display: flex;
-      justify-content: center;
-    }
-    .databox{
-      width: 1300px;
-      height: 300px;
-      display: flex;
-      margin: auto;
+    ul,li{
+      margin: 0;
       padding: 0;
-      /*border: 1px red solid;*/
-      justify-content: center;
-      align-items: flex-end;
     }
-    .databox>div{
-      margin: 1px;
-      width: 1.5%;
-      font-size: 12px;
+    li{
+      display: inline-block;
+      float: left;
+      margin: 5px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
       text-align: center;
       color: white;
       background-color: red;
     }
-    button,input{
-      margin: 1em;
-      padding: .5em 1em;
-      border: none;
-      border-radius: 3px;
-      background-color: skyblue;
-      box-shadow: 0 0 1px grey;
-    }
-    input{
-      text-align: center;
-      background-color: white;
-    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <input type="number" min="10" max="100">
-    <button id="pushLeft">左侧排入</button>
-    <button id="pushRight">右侧推入</button>
-    <button id="pullLeft">左侧移出</button>
-    <button id="pullRight">右侧删出</button>
-    <button id="random">随机廿个</button>
-    <button id="sort">冒泡排序</button>
-    <button id="reset">重置全部</button>
-  </div>
-  <div style="height:50;"></div>
+	<input type="text">
+	<button id="pushLeft">左侧入</button>
+	<button id="pushRight">右侧入</button>
+	<button id="pullLeft">左侧出</button>
+	<button id="pullRight">右侧出</button>
   <script type="text/javascript" src="task.js"></script>
 </body>
 </html>
