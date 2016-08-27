@@ -19,16 +19,32 @@
     input{
       width: 300px;
     }
+
+    #show{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    #show div{
+      min-width: 30px;
+      margin: 5px;
+      border: 1px black solid;
+      text-align: center;
+      padding: 5px;
+    }
   </style>
 </head>
 <body>
   <textarea id="content"></textarea>
   <br>
-	<input id="catch" type="text">
+	<input id="match-value" type="text">
   <br>
   <button id="input">输入</button>
-	<button id="catch">匹配</button>
-
+	<button id="match">匹配</button>
+  <div id="show"></div>
+  <br>
+  <div id="tip"></div>
   <script type="text/javascript" src="task.js"></script>
 </body>
 </html>
