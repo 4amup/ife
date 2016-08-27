@@ -3,29 +3,32 @@
 <head>
 	<title>task18</title>
   <style type="text/css">
-    ul,li{
-      margin: 0;
-      padding: 0;
-    }
-    li{
-      display: inline-block;
-      float: left;
+    textarea,button,input{
+      width: 150px;
+      height: 20px;
       margin: 5px;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
+    }
+    button{
+      background-color: gray;
       color: white;
-      background-color: red;
+    }
+    textarea{
+      width: 300px;
+      height: 150px;
+    }
+    input{
+      width: 300px;
     }
   </style>
 </head>
 <body>
-	<input type="text">
-	<button id="pushLeft">左侧入</button>
-	<button id="pushRight">右侧入</button>
-	<button id="pullLeft">左侧出</button>
-	<button id="pullRight">右侧出</button>
+  <textarea id="content"></textarea>
+  <br>
+	<input id="catch" type="text">
+  <br>
+  <button id="input">输入</button>
+	<button id="catch">匹配</button>
+
   <script type="text/javascript" src="task.js"></script>
 </body>
 </html>
