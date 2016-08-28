@@ -26,7 +26,7 @@ function addTags() {
     // 处理字符串 先去掉两端的空格 再替换掉逗号或其他
     var result = tags.value.trim().replace(/[\s\r\n\,\，]/g,"");
     // 检查输入值是否重复或为空值
-    if(arr.toString().indexOf(result)>-1){
+    if(arr.indexOf(result)>-1){
       console.log("重复");
       tags.value=null;
       return false;
