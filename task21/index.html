@@ -7,19 +7,30 @@
       width: 30em;
       height: 8em;
     }
+    .show{
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .show>div{
+      min-width: 10px;
+      background-color: blue;
+      color: white;
+      font-size: 2em;
+      margin: 5px;
+    }
   </style>
 </head>
 <body>
   <label for="tags">
     tag:
-    <input id="tags" type="text" name="tags">
+    <input id="tags" name="tags">
   </label>
-  <div id="show-tags"></div>
+  <div class="show tags"></div>
   <br>
   <textarea id="content"></textarea>
   <br>
   <button id="confirm">确认兴趣爱好</button>
-  <div id="show-hobbies"></div>
+  <div class="show hobbies"></div>
   <div id="tip"></div>
   <script type="text/javascript" src="task.js"></script>
 </body>
