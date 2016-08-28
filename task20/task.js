@@ -30,8 +30,9 @@ function render(array){
 }
 // 标记函数
 function mark(re) {
+  var reg = new RegExp(re,"g");
   for(var i=0;i<showIt.childNodes.length;i++) {
-  var content = showIt.childNodes[i].textContent.replace(re,"<mark>"+re+"</mark>");
+  var content = showIt.childNodes[i].textContent.replace(reg,"<mark>"+re+"</mark>");
   showIt.childNodes[i].innerHTML = content;
   }
 }
