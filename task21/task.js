@@ -1,6 +1,8 @@
 // 初始化一些公共变量
 var tags = document.getElementById("tags");
-var showtags = document.getElementsByClassName("show")[0];
+var showtags = document.getElementsByClassName("showtags")[0];
+var showhobbies = document.getElementsByClassName("showhobbies")[0];
+var confirm = document.getElementById("confirm");
 // 渲染函数
 function render(item,parent){
   if (!item) {
@@ -10,14 +12,6 @@ function render(item,parent){
   child.setAttribute("class","tag");
   child.innerHTML = item;
   parent.appendChild(child);
-
-  // item.forEach(function(item){
-  //   var child = document.createElement("div");
-  //   child.setAttribute("class","tag");
-  //   child.innerHTML = item;
-  //   parent.appendChild(child);
-  // })
-  
 }
 // 功能函数一 添加tag
 function addTags() {
@@ -41,7 +35,7 @@ function addTags() {
     if (showtags.childNodes.length>9) {
       tags.value=null;
       showtags.removeChild(showtags.childNodes[0]);
-      return render(result,showtags);
+      return render(showtags);
     }
     render(result,showtags);
     tags.value=null;
@@ -52,15 +46,37 @@ function delTag(e) {
   if (e.target.className = "tag") {
     e.target.parentNode.removeChild(e.target);
   }
-  // 更新数组
+}
+// 功能函数三 添加hobbies
+function addHobbies() {
+  var hobbies = document.getElementById("hobbies").value;
+  if (!hobbies) {
+    console.log("空");
+    return false;
+  }
+  var arr = new Array();
+  arr = hobbies.split(/[\n\,\，\、\s\t]+/);
+  // 去掉末尾空值
+  if (arr[arr.length-1] == "") {
+    arr.pop();
+  }
+  // 去重
+
+  // 保留最新的十个元素
+  if (arr.length>10) {
+    arr = arr.slice(arr.length-10,arr.length);
+  }
+  for (var i = 0; i < arr.length; i++) {
+    render(arr[i],showhobbies);
+  }
 
 }
-
 function init() {
   // keyup-按键松开
   // keypress-按键按下并松开
   // keydown-按键按下时
   tags.addEventListener("keyup",addTags);
   showtags.addEventListener("click",delTag);
+  confirm.addEventListener("click",addHobbies);
 }
 init();

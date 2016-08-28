@@ -18,12 +18,15 @@
       font-size: 2em;
       margin: 5px;
     }
-    .show>div:hover{
+    .showtags>div:hover{
       background-color: red;
     }
-    .show>div:hover::before{
+    .showtags>div:hover::before{
       content:"删除";
       font-weight: bolder;
+    }
+    .showhobbies>div{
+      background-color: orange;
     }
   </style>
 </head>
@@ -32,12 +35,12 @@
     tag:
     <input id="tags" name="tags">
   </label>
-  <div class="show"></div>
+  <div class="show showtags"></div>
   <br>
-  <textarea id="content"></textarea>
+  <textarea id="hobbies"></textarea>
   <br>
   <button id="confirm">确认兴趣爱好</button>
-  <div class="show"></div>
+  <div class="show showhobbies"></div>
   <div id="tip"></div>
   <script type="text/javascript" src="task.js"></script>
 </body>
