@@ -3,6 +3,19 @@ var tags = document.getElementById("tags");
 var showtags = document.getElementsByClassName("showtags")[0];
 var showhobbies = document.getElementsByClassName("showhobbies")[0];
 var confirm = document.getElementById("confirm");
+var aoh = new Array();
+// 为数组添加一个公共方法，即数组去重
+Array.prototype.unique = function(){
+  var res = [];
+  var json = {};
+  for (var i = 0; i < this.length; i++) {
+    if (!json[this[i]]) {
+      res.push(this[i]);
+      json[this[i]] = 1;
+    }
+  }
+  return res;
+}
 // 渲染函数
 function render(item,parent){
   if (!item) {
@@ -32,10 +45,10 @@ function addTags() {
     }
     // 把符合条件的结果的值推入数组
     // 检查长度，超过10，自动把第一个删掉
-    if (showtags.childNodes.length>9) {
+    if (showtags.childNodes.length>10-1) {
       tags.value=null;
-      showtags.removeChild(showtags.childNodes[0]);
-      return render(showtags);
+      showtags.removeChild(showtags.firstChild);
+      // render(showtags);
     }
     render(result,showtags);
     tags.value=null;
@@ -49,27 +62,36 @@ function delTag(e) {
 }
 // 功能函数三 添加hobbies
 function addHobbies() {
-  var hobbies = document.getElementById("hobbies").value;
-  if (!hobbies) {
+  var hobbies = document.getElementById("hobbies");
+    if (!hobbies.value) {
     console.log("空");
     return false;
   }
-  var arr = new Array();
-  arr = hobbies.split(/[\n\,\，\、\s\t]+/);
+
+  var arr = hobbies.value.split(/[\n\,\，\、\s\t]+/);
+  // 重置hobbies.value为空
+  hobbies.value = null;
   // 去掉末尾空值
-  if (arr[arr.length-1] == "") {
-    arr.pop();
-  }
-  // 去重
-
-  // 保留最新的十个元素
-  if (arr.length>10) {
-    arr = arr.slice(arr.length-10,arr.length);
-  }
   for (var i = 0; i < arr.length; i++) {
-    render(arr[i],showhobbies);
+    if (arr[i]=="") {
+      arr.pop(arr[i]);
+    }
   }
-
+  aoh = aoh.concat(arr);
+  // 去重
+  aoh = aoh.unique();
+  // 保留最新的十个元素
+  if (aoh.length>10) {
+    aoh = aoh.slice(aoh.length-10,aoh.length);
+  }
+  // 重置渲染对象
+  for (var i = showhobbies.childNodes.length; i > 0; i--) {
+    showhobbies.removeChild(showhobbies.lastChild);
+  }
+  // 再渲染可视化
+  for (var i = 0; i < aoh.length; i++) {
+    render(aoh[i],showhobbies);
+  }
 }
 function init() {
   // keyup-按键松开
