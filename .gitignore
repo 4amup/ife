@@ -4,3 +4,5 @@
 *.xml
 
 *.chw
+
+.DS_Store
