@@ -19,8 +19,20 @@ var changeNodeBg = function changeNodeBg(node) {
   console.log(node.key.textContent);
   node.key.setAttribute('class','divbg');
   // 中间要是能休息500ms就把功能实现了
-  node.key.removeAttribute('class');
+  sleep(1000);
+  // node.key.removeAttribute('class');
 };
+// sleep方法
+function sleep(numberMillis) {
+  var now = new Date();
+  var exitTime = now.getTime() + numberMillis;
+  while (true) {
+    now = new Date();
+    if (now.getTime() > exitTime){
+      return;
+    };
+  };
+}
 function BinarySearchTree() {
     // 定义新节点的构造函数
   var Node = function(key,value){
