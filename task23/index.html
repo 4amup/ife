@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>task22</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    html{
+      font-size: 12px;
+    }
+    .container{
+      min-width: 1000px;
+      margin: 1em auto;
+    }
+    div{
+      background-color: white;
+      border:1px black solid;
+      display: flex;
+      padding: .5em .5em;
+      margin: .2em;
+      justify-content: space-around;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper" class="container">
+    Super
+    <div class="layer1">
+      Car
+      <div class="layer2">
+        Apple
+        <div class="layer3">Pear</div>
+        <div class="layer3">Pig</div>
+        <div class="layer3">Cola</div>
+        <div class="layer3">Soccer</div>
+      </div>
+      <div>
+        Phone
+      </div>
+      <div class="layer2">
+        <div class="layer3">Book</div>
+        <div class="layer3">School</div>
+      </div>
+    </div>
+
+    <div class="layer1">
+      Note
+      <div class="layer2">
+        Human
+        <div class="layer3">Code</div>
+        <div class="layer3">Operate</div>
+        <div class="layer3">Man</div>
+      </div>
+      <div class="layer2">
+      Program
+        <div class="layer3">
+          Bement
+          <div class="layer4">Cat</div>
+        </div>
+        <div class="layer3">
+          Glass
+        </div>
+      </div>
+    </div>
+
+    <div class="layer1">
+      Fish
+    </div>
+  </div>
+  <div>
+    <button id="preOrder">前序遍历</button>
+    <button id="inOrder">中序遍历</button>
+    <button id="postOrder">后序遍历</button>
+  </div>
+  <script type="text/javascript" src="task.js"></script>
+</body>
+</html>
