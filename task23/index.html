@@ -4,8 +4,9 @@
   <title>task23</title>
   <meta charset="utf-8">
   <style type="text/css">
-    html{
+    body{
       font-size: 12px;
+      background-color: gray;
     }
     .container{
       min-width: 1000px;
@@ -19,6 +20,10 @@
       margin: .2em;
       justify-content: space-around;
       text-align: center;
+    }
+    .markdiv{
+      border: 2px red solid;
+      background-color: yellow !important;
     }
   </style>
 </head>
@@ -34,7 +39,7 @@
         <div class="layer3">Cola</div>
         <div class="layer3">Soccer</div>
       </div>
-      <div>
+      <div class="layer2">
         Phone
       </div>
       <div class="layer2">
@@ -71,6 +76,8 @@
   <button id="preOrder">前序遍历</button>
   <button id="inOrder">中序遍历</button>
   <button id="postOrder">后序遍历</button>
+  <input id="inputit" name="input">
+  <button id="findit">全树查找</button>
   <script type="text/javascript" src="task.js"></script>
 </body>
 </html>

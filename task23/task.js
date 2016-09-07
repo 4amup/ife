@@ -1,5 +1,6 @@
 var result = [];//用于存放遍历的dom节点
 var timer = null;//定义动画定时器
+var tip = null;
 
 window.onload = function(){
   var rootNode = document.getElementById("wrapper");
@@ -32,6 +33,25 @@ window.onload = function(){
 
     postOrder(rootNode);
     startAnimate();
+  }
+  //为查找操作绑定时间
+  document.getElementById("findit").onclick = function(){
+    // init
+    styleReset();
+    clearInterval(timer);
+    result = [];
+    var tip = document.createElement('p');
+    tip.setAttribute('class','tip');
+    // 前序遍历后得到result数组
+    postOrder(rootNode);
+    // get value后和数组进行比较
+    var value = document.getElementById("inputit").value;
+    if (!value) {
+      tip.innerHTML = "请输入查找词！";
+      document.body.appendChild(tip);
+      return false;
+    }
+    findAnimate(value);
   }
 }
 /*
@@ -73,7 +93,7 @@ function postOrder(node){
   }
   result.push(node);
 }
-//动画开启函数，每隔一秒
+//动画开启函数，每隔half秒
 function startAnimate(){
   var i = 0;
   result[i].style.backgroundColor = 'blue';
@@ -88,10 +108,58 @@ function startAnimate(){
     }
   }, 500)
 }
+//查找动画
+function findAnimate(value){
+  var i = 0;
+
+  var count = 0;
+  if(result[i].firstChild.textContent.trim().toLowerCase() == value.trim().toLowerCase()){
+    result[i].setAttribute('class','markdiv');
+    count++;
+  };
+
+  result[i].style.backgroundColor = 'blue';
+
+  timer = setInterval(function(){
+    i++;
+    if(i < result.length){
+      if(result[i].firstChild.textContent.trim().toLowerCase() == value.trim().toLowerCase()){
+        result[i].setAttribute('class','markdiv');
+        count++;
+      };
+      result[i-1].style.backgroundColor = '#fff';
+      result[i].style.backgroundColor = 'blue';
+    }else{
+      clearInterval(timer);
+      result[result.length-1].style.backgroundColor = '#fff';
+    }
+  }, 500);
+
+  // if (count) {
+  //   tip
+  // }else{
+
+  // }
+
+  document.body.appendChild(tip);
+}
+
 //样式初始化函数
 function styleReset(){
   var divEles = document.getElementsByTagName("div");
   for(var i=0; i<divEles.length;i++){
     divEles[i].style.backgroundColor = '#fff';
+  }
+
+  var markDivs = document.getElementsByClassName('markdiv');
+  if (markDivs.length) {
+    for (var j = 0; j < markDivs.length; j++) {
+      markDivs[j].removeAttribute('class');
+    }
+  }
+
+  var tips = document.getElementsByClassName('tip');
+  if (tips.length) {
+    tips[0].parentNode.removeChild(tips[0]);
   }
 }
