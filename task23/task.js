@@ -43,8 +43,8 @@ function preOrder(node){
   if(node.firstElementChild !== null){
     preOrder(node.firstElementChild);
   }
-  if(node.lastElementChild !== null){
-    preOrder(node.lastElementChild);
+  if(node.nextElementSibling !== null && node.nextElementSibling.tagName == 'DIV'){
+    preOrder(node.nextElementSibling);
   }
 }
 /*
@@ -56,8 +56,8 @@ function inOrder(node){
     inOrder(node.firstElementChild);
   }
   result.push(node);
-  if(node.lastElementChild !== null){
-    inOrder(node.lastElementChild);
+  if(node.nextElementSibling !== null && node.nextElementSibling.tagName == 'DIV'){
+    inOrder(node.nextElementSibling);
   }
 }
 /*
@@ -68,8 +68,8 @@ function postOrder(node){
   if(node.firstElementChild !== null){
     postOrder(node.firstElementChild);
   }
-  if(node.lastElementChild !== null){
-    postOrder(node.lastElementChild);
+  if(node.nextElementSibling !== null && node.nextElementSibling.tagName == 'DIV'){
+    postOrder(node.nextElementSibling);
   }
   result.push(node);
 }
@@ -86,7 +86,7 @@ function startAnimate(){
       clearInterval(timer);
       result[result.length-1].style.backgroundColor = '#fff';
     }
-  }, 1000)
+  }, 500)
 }
 //样式初始化函数
 function styleReset(){
