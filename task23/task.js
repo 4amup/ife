@@ -47,7 +47,7 @@ window.onload = function(){
     // get value后和数组进行比较
     var value = document.getElementById("inputit").value;
     if (!value) {
-      tip.innerHTML = "请输入查找词！";
+      tip.innerHTML = "Tip:请输入查找词！";
       document.body.appendChild(tip);
       return false;
     }
@@ -111,8 +111,9 @@ function startAnimate(){
 //查找动画
 function findAnimate(value){
   var i = 0;
-
-  var count = 0;
+  var count =0;
+  var tip = document.createElement('p');
+  tip.setAttribute('class','tip');
   if(result[i].firstChild.textContent.trim().toLowerCase() == value.trim().toLowerCase()){
     result[i].setAttribute('class','markdiv');
     count++;
@@ -132,16 +133,15 @@ function findAnimate(value){
     }else{
       clearInterval(timer);
       result[result.length-1].style.backgroundColor = '#fff';
+
+      if (count) {
+        tip.innerHTML = "Tip:找到了"+count+"个匹配节点。";
+      }else{
+        tip.innerHTML = "Tip:找不到您要查询的内容！";
+      }
+      document.body.appendChild(tip);
     }
   }, 500);
-
-  // if (count) {
-  //   tip
-  // }else{
-
-  // }
-
-  document.body.appendChild(tip);
 }
 
 //样式初始化函数
