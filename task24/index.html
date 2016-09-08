@@ -22,11 +22,15 @@
       text-align: center;
     }
     .markdiv{
-      border: 2px red solid;
+      border: 1px green solid;
       background-color: yellow !important;
     }
     .tip{
       color:red;
+    }
+    .selectdiv{
+      border: 2px red solid;
+      box-shadow: 0 0 5px red;
     }
   </style>
 </head>
@@ -79,8 +83,13 @@
   <button id="preOrder">前序遍历</button>
   <button id="inOrder">中序遍历</button>
   <button id="postOrder">后序遍历</button>
+  <br>
   <input id="inputit" name="input">
   <button id="findit">全树查找</button>
+  <br>
+  <input id="addcontent" name="pushit">
+  <button id="pushit">插入节点</button>
+  <button id="delit">删除节点</button>
   <script type="text/javascript" src="task.js"></script>
 </body>
 </html>
