@@ -21,6 +21,9 @@
       justify-content: space-around;
       text-align: left;
     }
+    button{
+      width: fit-content;
+    }
     .markdiv{
       border: 1px green solid;
       background-color: yellow !important;
@@ -32,15 +35,21 @@
       border: 2px red solid;
       box-shadow: 0 0 5px red;
     }
+    .toggle{
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div id="wrapper" class="container">
     Super
+    <button>显示/隐藏</button>
     <div class="layer1">
       Car
+      <button>显示/隐藏</button>
       <div class="layer2">
         Apple
+        <button>显示/隐藏</button>
         <div class="layer3">Pear</div>
         <div class="layer3">Pig</div>
         <div class="layer3">Cola</div>
@@ -48,8 +57,10 @@
       </div>
       <div class="layer2">
         Phone
+        <button>显示/隐藏</button>
       </div>
       <div class="layer2">
+        <button>显示/隐藏</button>
         <div class="layer3">Book</div>
         <div class="layer3">School</div>
       </div>
@@ -57,6 +68,7 @@
 
     <div class="layer1">
       Note
+      <button>显示/隐藏</button>
       <div class="layer2">
         Human
         <div class="layer3">Code</div>
@@ -65,18 +77,22 @@
       </div>
       <div class="layer2">
       Program
+      <button>显示/隐藏</button>
         <div class="layer3">
           Bement
+          <button>显示/隐藏</button>
           <div class="layer4">Cat</div>
         </div>
         <div class="layer3">
           Glass
+          <button>显示/隐藏</button>
         </div>
       </div>
     </div>
 
     <div class="layer1">
       Fish
+      <button>显示/隐藏</button>
     </div>
   </div>
 
@@ -91,5 +107,6 @@
   <button id="pushit">插入节点</button>
   <button id="delit">删除节点</button>
   <script type="text/javascript" src="task.js"></script>
+  <script type="text/javascript" src="test.js"></script>
 </body>
 </html>
